@@ -1,12 +1,12 @@
 /* ---------- Hero ---------- */
 .hero { position: relative; padding: calc(var(--header-h) + 56px) 0 72px; overflow: hidden; }
-.hero__bg { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #eaf4f1 0%, var(--bg) 100%); }
+.hero__bg { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #e8f3fc 0%, var(--bg) 100%); }
 .blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .55; }
-.blob--1 { width: 520px; height: 520px; background: #b8e3da; top: -160px; right: -120px; animation: float 16s ease-in-out infinite; }
+.blob--1 { width: 520px; height: 520px; background: #bfe0f7; top: -160px; right: -120px; animation: float 16s ease-in-out infinite; }
 .blob--2 { width: 380px; height: 380px; background: #f6dfb8; bottom: -80px; left: -120px; animation: float 20s ease-in-out infinite reverse; }
 .grid-dots {
   position: absolute; inset: 0;
-  background-image: radial-gradient(rgba(14, 110, 107, .14) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(11, 111, 184, .14) 1px, transparent 1px);
   background-size: 26px 26px;
   mask-image: radial-gradient(ellipse at 70% 30%, #000 10%, transparent 65%);
   -webkit-mask-image: radial-gradient(ellipse at 70% 30%, #000 10%, transparent 65%);
@@ -19,8 +19,8 @@
   padding: 8px 16px; border-radius: 999px; background: var(--surface); box-shadow: var(--shadow-sm);
   font-size: 13px; font-weight: 600; color: var(--primary);
 }
-.eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary-2); box-shadow: 0 0 0 4px rgba(22, 163, 148, .2); animation: pulse 2s infinite; }
-@keyframes pulse { 50% { box-shadow: 0 0 0 8px rgba(22, 163, 148, 0); } }
+.eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary-2); box-shadow: 0 0 0 4px rgba(45, 156, 219, .2); animation: pulse 2s infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 8px rgba(45, 156, 219, 0); } }
 
 .hero__title {
   margin: 22px 0 20px;
@@ -38,7 +38,7 @@
 .hero__visual { position: relative; }
 .hero-card {
   position: relative; aspect-ratio: 4 / 4.6; border-radius: 32px; overflow: hidden;
-  background: linear-gradient(150deg, #16a394 0%, #0e6e6b 45%, #0a3f4a 100%);
+  background: linear-gradient(150deg, #2d9cdb 0%, #0b6fb8 45%, #0a3a66 100%);
   box-shadow: var(--shadow-lg);
 }
 .hero-card__art { position: absolute; inset: 0; display: grid; place-items: center; }

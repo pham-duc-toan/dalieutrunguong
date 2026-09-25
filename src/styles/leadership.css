@@ -13,14 +13,14 @@
   box-shadow: var(--shadow-sm); overflow: hidden; transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
 .leader:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
-.leader__photo { aspect-ratio: 4 / 4.2; background: linear-gradient(160deg, var(--primary-soft), #c9e7e0); display: grid; place-items: center; overflow: hidden; }
+.leader__photo { aspect-ratio: 4 / 4.2; background: linear-gradient(160deg, var(--primary-soft), #cbe4f6); display: grid; place-items: center; overflow: hidden; }
 .leader__photo img.avatar { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
 .leader__body { padding: 20px 22px 24px; }
 .leader__body h3 { font-size: 17px; margin-bottom: 4px; }
 .leader__body p { font-size: 14px; color: var(--muted); }
 
 .leader--featured { grid-column: span 2; grid-row: span 2; background: var(--ink); color: #fff; position: relative; }
-.leader--featured .leader__photo { aspect-ratio: auto; flex: 1; min-height: 360px; background: linear-gradient(160deg, #16a394, #0e6e6b 55%, #0a3f4a); }
+.leader--featured .leader__photo { aspect-ratio: auto; flex: 1; min-height: 360px; background: linear-gradient(160deg, #2d9cdb, #0b6fb8 55%, #0a3a66); }
 .leader--featured .leader__body { padding: 28px 30px 30px; }
 .leader--featured .leader__body h3 { font-family: var(--serif); font-size: 28px; font-weight: 600; }
 .leader--featured .leader__body p { color: #f2c37a; font-size: 15px; font-weight: 500; }

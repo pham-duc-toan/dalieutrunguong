@@ -36,7 +36,7 @@
 .mvv__card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
 .mvv__card:hover::after { opacity: 1; transform: scale(1); }
 .mvv__card > * { position: relative; z-index: 1; }
-.mvv__ic { width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; background: linear-gradient(135deg, var(--primary-2), var(--primary)); margin-bottom: 22px; box-shadow: 0 10px 20px -10px rgba(14, 110, 107, .8); }
+.mvv__ic { width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; background: linear-gradient(135deg, var(--primary-2), var(--primary)); margin-bottom: 22px; box-shadow: 0 10px 20px -10px rgba(11, 111, 184, .8); }
 .mvv__ic svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linejoin: round; }
 .mvv__card h3 { font-size: 21px; margin-bottom: 10px; }
 .mvv__card p { color: var(--ink-2); font-size: 15px; }

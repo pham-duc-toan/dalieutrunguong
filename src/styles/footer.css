@@ -5,9 +5,9 @@
 .footer__brand p { margin-top: 18px; max-width: 380px; font-size: 15px; }
 .footer__col { display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
 .footer__col h4 { color: #fff; font-size: 15px; margin-bottom: 6px; }
-.footer__col a:hover { color: #7fe0cf; }
+.footer__col a:hover { color: #8fd0ff; }
 .footer__bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 24px; font-size: 14px; }
-.to-top:hover { color: #7fe0cf; }
+.to-top:hover { color: #8fd0ff; }
 @media (max-width: 760px) { .footer__inner { grid-template-columns: 1fr; gap: 32px; } }
 
 .back-top {
@@ -16,5 +16,5 @@
   opacity: 0; transform: translateY(16px); pointer-events: none; transition: opacity .3s, transform .3s var(--ease), background .2s;
 }
 .back-top.is-visible { opacity: 1; transform: none; pointer-events: auto; }
-.back-top:hover { background: #0b5d5a; }
+.back-top:hover { background: #095a96; }
 .back-top svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
