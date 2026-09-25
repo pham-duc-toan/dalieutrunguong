@@ -1,24 +1,33 @@
 import Reveal from "./common/Reveal";
 import Icon from "./common/Icon";
-import Placeholder from "./common/Placeholder";
+import Cover from "./common/Cover";
+import MoreLink from "./common/MoreLink";
 import SectionHeading from "./common/SectionHeading";
-import { infoItems, missionVisionValues, duties } from "../data/hospital";
-import "../styles/about.css";
+import { hospital, infoItems, missionVisionValues, duties } from "@/data/hospital";
 
-/** 01. Giới thiệu chung */
-export default function About() {
+/**
+ * 01. Giới thiệu chung
+ * variant="preview": trang chủ (có tiêu đề mục + nút xem thêm, không có chức năng nhiệm vụ)
+ * variant="full":    trang /gioi-thieu (tiêu đề nằm ở PageHeader)
+ */
+export default function About({ variant = "full" }) {
+  const isPreview = variant === "preview";
+  const Heading = isPreview ? "h3" : "h2";
+
   return (
-    <section className="section" id="gioi-thieu">
+    <section className={`section ${isPreview ? "" : "section--flush"}`} id="gioi-thieu">
       <div className="container">
-        <SectionHeading
-          number="01"
-          kicker="Giới thiệu chung"
-          title={
-            <>
-              Bệnh viện chuyên khoa <em>đầu ngành</em> về Da liễu của Việt Nam
-            </>
-          }
-        />
+        {isPreview && (
+          <SectionHeading
+            number="01"
+            kicker="Giới thiệu chung"
+            title={
+              <>
+                Bệnh viện chuyên khoa <em>đầu ngành</em> về Da liễu của Việt Nam
+              </>
+            }
+          />
+        )}
 
         <div className="about">
           <Reveal className="about__text">
@@ -51,10 +60,22 @@ export default function About() {
 
           <Reveal className="about__visual" delay={0.1}>
             <div className="photo photo--main">
-              <Placeholder tone="teal" label="Ảnh toàn cảnh bệnh viện" />
+              <Cover
+                src={hospital.images.main}
+                alt={`Toàn cảnh ${hospital.name}`}
+                tone="teal"
+                label="Ảnh toàn cảnh bệnh viện"
+                sizes="(max-width: 960px) 90vw, 45vw"
+              />
             </div>
             <div className="photo photo--sub">
-              <Placeholder tone="sand" label="Ảnh hoạt động chuyên môn" />
+              <Cover
+                src={hospital.images.sub}
+                alt="Hoạt động chuyên môn tại bệnh viện"
+                tone="sand"
+                label="Ảnh hoạt động chuyên môn"
+                sizes="(max-width: 960px) 50vw, 25vw"
+              />
             </div>
             <div className="badge-year">
               <strong>40+</strong>
@@ -74,25 +95,28 @@ export default function About() {
               <span className="mvv__ic">
                 <Icon name={item.icon} />
               </span>
-              <h3>{item.title}</h3>
+              <Heading>{item.title}</Heading>
               <p>{item.text}</p>
             </Reveal>
           ))}
         </div>
 
-        {/* Chức năng & nhiệm vụ */}
-        <Reveal className="duties">
-          <h3 className="duties__title">Chức năng &amp; nhiệm vụ</h3>
-          <div className="duties__grid">
-            {duties.map((duty, i) => (
-              <div className="duty" key={duty.title}>
-                <span>{String(i + 1).padStart(2, "0")}</span>
-                <h4>{duty.title}</h4>
-                <p>{duty.text}</p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
+        {isPreview ? (
+          <MoreLink href="/gioi-thieu">Xem giới thiệu đầy đủ</MoreLink>
+        ) : (
+          <Reveal className="duties">
+            <h2 className="duties__title">Chức năng &amp; nhiệm vụ</h2>
+            <div className="duties__grid">
+              {duties.map((duty, i) => (
+                <div className="duty" key={duty.title}>
+                  <span>{String(i + 1).padStart(2, "0")}</span>
+                  <h3>{duty.title}</h3>
+                  <p>{duty.text}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        )}
       </div>
     </section>
   );

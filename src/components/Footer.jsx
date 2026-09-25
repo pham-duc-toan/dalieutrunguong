@@ -1,23 +1,8 @@
+import Link from "next/link";
 import Brand from "./common/Brand";
-import Icon from "./common/Icon";
-import { hospital } from "../data/hospital";
-import { navItems } from "../data/navigation";
-import { useScrolledPast } from "../hooks/useScroll";
-import "../styles/footer.css";
-
-function BackToTop() {
-  const visible = useScrolledPast(700);
-
-  return (
-    <button
-      className={`back-top ${visible ? "is-visible" : ""}`}
-      aria-label="Lên đầu trang"
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-    >
-      <Icon name="arrowUp" />
-    </button>
-  );
-}
+import BackToTop from "./BackToTop";
+import { hospital } from "@/data/hospital";
+import { navItems } from "@/data/navigation";
 
 export default function Footer() {
   return (
@@ -28,19 +13,20 @@ export default function Footer() {
             <Brand light />
             <p>Bệnh viện chuyên khoa đầu ngành về Da liễu của Việt Nam, trực thuộc {hospital.authority}.</p>
           </div>
-          <div className="footer__col">
-            <h4>Khám phá</h4>
+          <nav className="footer__col" aria-label="Liên kết chân trang">
+            <h2>Khám phá</h2>
             {navItems.map((item) => (
-              <a key={item.id} href={`#${item.id}`}>
+              <Link key={item.href} href={item.href}>
                 {item.label}
-              </a>
+              </Link>
             ))}
-          </div>
-          <div className="footer__col">
-            <h4>Liên hệ</h4>
+            <Link href="/tin-tuc">Tin tức &amp; sự kiện</Link>
+          </nav>
+          <address className="footer__col">
+            <h2>Liên hệ</h2>
             <span>{hospital.address}</span>
             <span>Website: {hospital.website}</span>
-          </div>
+          </address>
         </div>
         <div className="container footer__bottom">
           <span>

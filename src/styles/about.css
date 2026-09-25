@@ -38,7 +38,7 @@
 .mvv__card > * { position: relative; z-index: 1; }
 .mvv__ic { width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; background: linear-gradient(135deg, var(--primary-2), var(--primary)); margin-bottom: 22px; box-shadow: 0 10px 20px -10px rgba(11, 111, 184, .8); }
 .mvv__ic svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linejoin: round; }
-.mvv__card h3 { font-size: 21px; margin-bottom: 10px; }
+.mvv__card :is(h2, h3) { font-size: 21px; margin-bottom: 10px; }
 .mvv__card p { color: var(--ink-2); font-size: 15px; }
 
 .duties { margin-top: 80px; padding: 48px; border-radius: 28px; background: var(--surface); box-shadow: var(--shadow-sm); }
@@ -48,7 +48,7 @@
 .duty:nth-child(3n+2), .duty:nth-child(3n+3) { border-left: 1px solid var(--line); }
 .duty:hover { background: var(--tint); }
 .duty span { font-family: var(--serif); font-size: 14px; font-weight: 600; color: var(--accent); }
-.duty h4 { font-size: 18px; margin: 6px 0 8px; }
+.duty h3 { font-size: 18px; margin: 6px 0 8px; }
 .duty p { color: var(--muted); font-size: 14.5px; }
 
 @media (max-width: 960px) {

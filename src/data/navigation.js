@@ -1,7 +1,7 @@
-/** 4 mục chính của trang – id trùng với id của từng section. */
+/** 4 mục chính của website – mỗi mục là một trang riêng. */
 export const navItems = [
-  { id: "gioi-thieu", label: "Giới thiệu chung" },
-  { id: "thanh-tuu", label: "Thành tựu nổi bật" },
-  { id: "lanh-dao", label: "Đảng ủy – Giám đốc" },
-  { id: "media", label: "Media" },
+  { href: "/gioi-thieu", label: "Giới thiệu chung" },
+  { href: "/thanh-tuu", label: "Thành tựu nổi bật" },
+  { href: "/lanh-dao", label: "Đảng ủy – Giám đốc" },
+  { href: "/media", label: "Media" },
 ];

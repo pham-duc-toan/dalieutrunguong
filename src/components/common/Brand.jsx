@@ -1,9 +1,10 @@
-import { hospital } from "../../data/hospital";
+import Link from "next/link";
+import { hospital } from "@/data/hospital";
 
 /** Logo + tên bệnh viện. light = phiên bản trên nền tối (footer). */
 export default function Brand({ light = false }) {
   return (
-    <a href="#top" className={`brand ${light ? "brand--light" : ""}`} aria-label="Về đầu trang">
+    <Link href="/" className={`brand ${light ? "brand--light" : ""}`} aria-label={`${hospital.name} – Trang chủ`}>
       <span className="brand__mark" aria-hidden="true">
         <svg viewBox="0 0 40 40">
           <rect width="40" height="40" rx="11" />
@@ -14,6 +15,6 @@ export default function Brand({ light = false }) {
         <strong>{hospital.name}</strong>
         <small>{hospital.nameEn}</small>
       </span>
-    </a>
+    </Link>
   );
 }

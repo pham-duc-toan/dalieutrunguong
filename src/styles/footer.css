@@ -4,7 +4,7 @@
 .footer__inner { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255, 255, 255, .1); }
 .footer__brand p { margin-top: 18px; max-width: 380px; font-size: 15px; }
 .footer__col { display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
-.footer__col h4 { color: #fff; font-size: 15px; margin-bottom: 6px; }
+.footer__col h2 { color: #fff; font-size: 15px; margin-bottom: 6px; }
 .footer__col a:hover { color: #8fd0ff; }
 .footer__bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 24px; font-size: 14px; }
 .to-top:hover { color: #8fd0ff; }

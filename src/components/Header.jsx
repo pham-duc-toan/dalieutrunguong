@@ -1,20 +1,27 @@
-import { useEffect, useState } from "react";
-import Brand from "./common/Brand";
-import { navItems } from "../data/navigation";
-import { useActiveSection, useScrolledPast } from "../hooks/useScroll";
-import "../styles/header.css";
+"use client";
 
-const sectionIds = navItems.map((item) => item.id);
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Brand from "./common/Brand";
+import { navItems } from "@/data/navigation";
+import { useScrolledPast } from "@/hooks/useScroll";
 
 export default function Header() {
+  const pathname = usePathname();
   const scrolled = useScrolledPast(20);
-  const activeId = useActiveSection(sectionIds);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Đóng menu khi chuyển trang
+  useEffect(() => setMenuOpen(false), [pathname]);
 
   // Khóa cuộn trang khi mở menu trên mobile
   useEffect(() => {
     document.body.classList.toggle("no-scroll", menuOpen);
+    return () => document.body.classList.remove("no-scroll");
   }, [menuOpen]);
+
+  const isActive = (href) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <header className={`header ${scrolled ? "is-scrolled" : ""}`}>
@@ -23,14 +30,14 @@ export default function Header() {
 
         <nav className={`nav ${menuOpen ? "is-open" : ""}`} id="nav" aria-label="Điều hướng chính">
           {navItems.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className={`nav__link ${activeId === item.id ? "is-active" : ""}`}
-              onClick={() => setMenuOpen(false)}
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`nav__link ${isActive(item.href) ? "is-active" : ""}`}
+              aria-current={isActive(item.href) ? "page" : undefined}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 

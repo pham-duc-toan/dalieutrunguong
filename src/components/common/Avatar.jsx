@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 /** Lấy 2 chữ cái đầu (bỏ học hàm, học vị): "PGS.TS. Lê Hữu Doanh" → "LD" */
 function getInitials(name) {
   const words = name
@@ -10,15 +12,21 @@ function getInitials(name) {
   return (first + words[words.length - 1][0]).toUpperCase();
 }
 
-/** Ảnh đại diện; nếu chưa có ảnh thì hiển thị chữ cái đầu. */
+/**
+ * Ảnh đại diện; nếu chưa có ảnh thì hiển thị chữ cái đầu.
+ * - small: ảnh tròn 48px
+ * - mặc định: ảnh phủ kín khung cha (.leader__photo)
+ */
 export default function Avatar({ name, photo, small = false }) {
-  const className = `avatar ${small ? "avatar--sm" : ""}`;
-
   if (photo) {
-    return <img className={className} src={photo} alt={name} loading="lazy" />;
+    return small ? (
+      <Image className="avatar avatar--sm" src={photo} alt={name} width={48} height={48} />
+    ) : (
+      <Image src={photo} alt={name} fill sizes="(max-width: 560px) 50vw, 25vw" style={{ objectFit: "cover" }} />
+    );
   }
   return (
-    <span className={`${className} avatar--ph`} aria-hidden="true">
+    <span className={`avatar avatar--ph ${small ? "avatar--sm" : ""}`} aria-hidden="true">
       {getInitials(name)}
     </span>
   );

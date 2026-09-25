@@ -9,8 +9,15 @@ export const hospital = {
   nameEn: "National Hospital of Dermatology & Venereology",
   founded: 1982,
   address: "15A Phương Mai, Hà Nội",
+  streetAddress: "15A Phương Mai",
+  city: "Hà Nội",
   website: "dalieu.vn",
   authority: "Bộ Y tế",
+  /** Ảnh mục Giới thiệu – đặt trong /public/images, để trống sẽ hiện khung màu */
+  images: {
+    main: "",
+    sub: "",
+  },
 };
 
 /* ---------- Đầu trang ---------- */

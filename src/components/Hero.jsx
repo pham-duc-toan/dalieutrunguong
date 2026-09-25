@@ -1,8 +1,8 @@
+import Link from "next/link";
 import Reveal from "./common/Reveal";
 import CountUp from "./common/CountUp";
 import Icon from "./common/Icon";
-import { hospital, heroStats } from "../data/hospital";
-import "../styles/hero.css";
+import { hospital, heroStats } from "@/data/hospital";
 
 /** Hình minh họa: dấu chữ thập trong các vòng tròn tế bào. */
 function HeroArt() {
@@ -59,15 +59,15 @@ export default function Hero() {
             nghiên cứu khoa học và chỉ đạo tuyến chuyên ngành Da liễu trên cả nước.
           </p>
           <div className="hero__actions">
-            <a href="#gioi-thieu" className="btn btn--primary">
+            <Link href="/gioi-thieu" className="btn btn--primary">
               Khám phá bệnh viện <Icon name="arrowRight" />
-            </a>
-            <a href="#media" className="btn btn--ghost">
+            </Link>
+            <Link href="/media" className="btn btn--ghost">
               <span className="play-ic" aria-hidden="true">
                 <Icon name="play" />
               </span>
               Xem media
-            </a>
+            </Link>
           </div>
         </Reveal>
 

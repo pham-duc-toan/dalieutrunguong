@@ -15,7 +15,7 @@
   transition: background .3s, transform .35s var(--ease), border-color .3s;
 }
 .achv__card:hover { background: rgba(255, 255, 255, .07); border-color: rgba(143, 208, 255, .35); transform: translateY(-4px); }
-.achv__card h3 { font-size: 20px; margin-bottom: 10px; }
+.achv__card :is(h2, h3) { font-size: 20px; margin-bottom: 10px; }
 .achv__card p { color: rgba(255, 255, 255, .68); font-size: 15px; }
 .achv__ic { width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; background: rgba(143, 208, 255, .12); margin-bottom: 22px; }
 .achv__ic svg { width: 24px; height: 24px; fill: none; stroke: #8fd0ff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
@@ -30,7 +30,7 @@
   border: 1px solid rgba(255, 255, 255, .2); box-shadow: 0 0 0 40px rgba(255, 255, 255, .04), 0 0 0 80px rgba(255, 255, 255, .03);
 }
 .achv__card--feature:hover { background: linear-gradient(160deg, #2d9cdb 0%, #0b6fb8 55%, #0b4577 100%); }
-.achv__card--feature h3 { font-family: var(--serif); font-size: 30px; font-weight: 600; line-height: 1.2; margin: 18px 0 14px; }
+.achv__card--feature :is(h2, h3) { font-family: var(--serif); font-size: 30px; font-weight: 600; line-height: 1.2; margin: 18px 0 14px; }
 .achv__card--feature p { color: rgba(255, 255, 255, .85); font-size: 16px; }
 .achv__tag { align-self: flex-start; padding: 6px 12px; border-radius: 999px; background: rgba(255, 255, 255, .16); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
 .achv__big { margin-top: auto; padding-top: 36px; }
@@ -43,7 +43,7 @@
   border: 1px solid rgba(217, 154, 58, .25);
   display: grid; grid-template-columns: .8fr 2fr; gap: 40px; align-items: center;
 }
-.awards__head h3 { font-family: var(--serif); font-size: 28px; font-weight: 600; color: #f2c37a; margin-bottom: 8px; }
+.awards__head :is(h2, h3) { font-family: var(--serif); font-size: 28px; font-weight: 600; color: #f2c37a; margin-bottom: 8px; }
 .awards__head p { color: rgba(255, 255, 255, .65); font-size: 15px; }
 .awards__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .awards__list li { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 14px; background: rgba(10, 26, 51, .5); }
@@ -68,7 +68,7 @@
   background: var(--dark); border: 2px solid #8fd0ff; box-shadow: 0 0 0 6px rgba(143, 208, 255, .12);
 }
 .timeline__year { display: block; font-family: var(--serif); font-size: 30px; font-weight: 600; color: #8fd0ff; line-height: 1; margin-bottom: 12px; }
-.timeline__track h4 { font-size: 16px; margin-bottom: 6px; }
+.timeline__track h3 { font-size: 16px; margin-bottom: 6px; }
 .timeline__track p { font-size: 14px; color: rgba(255, 255, 255, .6); }
 
 @media (max-width: 960px) {
@@ -83,6 +83,6 @@
 @media (max-width: 560px) {
   .achv { grid-template-columns: 1fr; }
   .achv__card--feature { padding: 30px 24px; }
-  .achv__card--feature h3 { font-size: 24px; }
+  .achv__card--feature :is(h2, h3) { font-size: 24px; }
   .awards__list { grid-template-columns: 1fr; }
 }
