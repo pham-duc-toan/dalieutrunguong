@@ -1,9 +1,18 @@
-import { Be_Vietnam_Pro, Lora } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/common/JsonLd";
 import { site } from "@/data/site";
 import { pageMetadata, hospitalJsonLd } from "@/lib/seo";
+
+// Font đóng gói sẵn trong dự án (không tải từ Google lúc build → build ổn định ở mọi nơi).
+// Mỗi file CSS chứa đủ bộ ký tự tiếng Việt; trình duyệt chỉ tải phần cần dùng.
+import "@fontsource/be-vietnam-pro/300.css";
+import "@fontsource/be-vietnam-pro/400.css";
+import "@fontsource/be-vietnam-pro/500.css";
+import "@fontsource/be-vietnam-pro/600.css";
+import "@fontsource/be-vietnam-pro/700.css";
+import "@fontsource-variable/lora/wght.css";
+import "@fontsource-variable/lora/wght-italic.css";
 
 import "@/styles/base.css";
 import "@/styles/header.css";
@@ -14,21 +23,6 @@ import "@/styles/achievements.css";
 import "@/styles/leadership.css";
 import "@/styles/media.css";
 import "@/styles/footer.css";
-
-// Font tự host bởi Next.js (không gọi Google Fonts lúc chạy, không bị giật chữ)
-const sans = Be_Vietnam_Pro({
-  subsets: ["vietnamese", "latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-sans",
-  display: "swap",
-});
-const serif = Lora({
-  subsets: ["vietnamese", "latin"],
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-serif",
-  display: "swap",
-});
 
 export const metadata = {
   ...pageMetadata({ path: "/" }),
@@ -63,7 +57,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="vi" className={`${sans.variable} ${serif.variable}`}>
+    <html lang="vi">
       <head>
         {/* Trình duyệt tắt JavaScript vẫn thấy đầy đủ nội dung */}
         <noscript>
