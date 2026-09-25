@@ -1,0 +1,94 @@
+/* ---------- 04. Media ---------- */
+.filters { display: inline-flex; gap: 8px; flex-wrap: wrap; }
+.filter { padding: 10px 20px; border-radius: 999px; background: var(--surface); font-size: 14px; font-weight: 600; color: var(--ink-2); box-shadow: var(--shadow-sm); transition: background .25s, color .25s, transform .25s; }
+.filter:hover { transform: translateY(-2px); }
+.filter.is-active { background: var(--ink); color: #fff; }
+
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; grid-auto-flow: dense; gap: 18px; }
+.m-item { position: relative; border-radius: 18px; overflow: hidden; text-align: left; padding: 0; background: var(--ink); box-shadow: var(--shadow-sm); }
+.m-item--wide { grid-column: span 2; }
+.m-item--tall { grid-row: span 2; }
+.m-item__media { position: absolute; inset: 0; transition: transform .7s var(--ease); }
+.m-item__media img { width: 100%; height: 100%; object-fit: cover; }
+.m-item__media .ph::after, .news-card__media .ph::after { transform: translate(-50%, -50%); opacity: .6; }
+.m-item:hover .m-item__media { transform: scale(1.06); }
+.m-item__overlay {
+  position: absolute; inset: auto 0 0 0; padding: 60px 20px 18px; color: #fff;
+  background: linear-gradient(180deg, transparent, rgba(8, 32, 43, .85));
+}
+.m-item__tag { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; opacity: .8; }
+.m-item__title { display: block; font-size: 16px; font-weight: 600; margin-top: 4px; line-height: 1.35; }
+.m-play {
+  position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
+  width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; z-index: 2;
+  background: rgba(255, 255, 255, .95); box-shadow: 0 0 0 10px rgba(255, 255, 255, .2);
+  transition: transform .35s var(--ease), box-shadow .35s;
+}
+.m-play svg { width: 22px; height: 22px; fill: var(--primary); margin-left: 3px; }
+.m-item:hover .m-play { transform: translate(-50%, -50%) scale(1.1); box-shadow: 0 0 0 16px rgba(255, 255, 255, .15); }
+.m-item[data-type="video"] .ph::after { display: none; }
+
+.news { margin-top: 90px; }
+.news__title { font-family: var(--serif); font-size: 28px; font-weight: 600; margin-bottom: 32px; }
+.news__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.news-card { display: flex; flex-direction: column; border-radius: var(--radius); background: var(--surface); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+.news-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.news-card__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
+.news-card__media > * { transition: transform .7s var(--ease); }
+.news-card:hover .news-card__media > .ph, .news-card:hover .news-card__media > img { transform: scale(1.06); }
+.news-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.news-card__date {
+  position: absolute; top: 14px; left: 14px; padding: 8px 12px; border-radius: 12px; background: var(--surface);
+  text-align: center; line-height: 1.1; box-shadow: var(--shadow-sm);
+}
+.news-card__date strong { display: block; font-family: var(--serif); font-size: 22px; color: var(--primary); }
+.news-card__date small { font-size: 11px; color: var(--muted); }
+.news-card__body { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+.news-card__tag { font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
+.news-card__body h4 { font-size: 18px; margin: 8px 0 10px; line-height: 1.35; }
+.news-card__body p { font-size: 14.5px; color: var(--muted); }
+.news-card__more { margin-top: auto; padding-top: 18px; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--primary); }
+.news-card__more svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s var(--ease); }
+.news-card:hover .news-card__more svg { transform: translateX(4px); }
+
+@media (max-width: 960px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+  .news__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; gap: 12px; }
+  .m-item--wide { grid-column: span 2; }
+  .m-item__overlay { padding: 40px 12px 12px; }
+  .m-item__title { font-size: 13px; }
+  .m-item__tag { display: none; }
+  .m-play { width: 44px; height: 44px; top: 36%; box-shadow: 0 0 0 6px rgba(255, 255, 255, .2); }
+  .m-play svg { width: 18px; height: 18px; }
+  .news__grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; gap: 16px;
+  padding: 24px; background: rgba(5, 18, 25, .92); backdrop-filter: blur(6px);
+  animation: lbIn .25s ease;
+}
+@keyframes lbIn { from { opacity: 0; } }
+.lightbox__figure { margin: 0; width: min(1000px, 100%); }
+.lightbox__stage { border-radius: 16px; overflow: hidden; background: #000; }
+.lightbox__stage img { width: 100%; max-height: 76vh; object-fit: contain; }
+.lightbox__stage iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
+.lightbox figcaption { margin-top: 16px; color: #fff; font-size: 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.lightbox figcaption span { padding: 4px 10px; border-radius: 999px; background: rgba(255, 255, 255, .12); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+.lightbox figcaption em { margin-left: auto; font-style: normal; opacity: .6; font-size: 14px; }
+.lightbox__close, .lightbox__nav {
+  width: 48px; height: 48px; border-radius: 50%; background: rgba(255, 255, 255, .1); color: #fff;
+  font-size: 28px; line-height: 1; display: grid; place-items: center; transition: background .2s; flex-shrink: 0;
+}
+.lightbox__close:hover, .lightbox__nav:hover { background: rgba(255, 255, 255, .22); }
+.lightbox__close { position: absolute; top: 20px; right: 20px; }
+@media (max-width: 640px) {
+  .lightbox { padding: 72px 16px 16px; flex-wrap: wrap; align-content: center; }
+  .lightbox__figure { order: -1; }
+  .lightbox__close { top: 14px; right: 14px; }
+  .ph--lg { min-height: 40vh; }
+}
