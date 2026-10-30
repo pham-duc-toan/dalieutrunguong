@@ -85,7 +85,7 @@ export default function LeadershipTabs() {
               style={{ objectFit: "cover" }}
             />
           </div>
-          <figcaption>Ban Giám đốc Bệnh viện Da liễu Trung ương (ảnh trong Kỷ yếu 40 năm)</figcaption>
+          <figcaption>Ban Giám đốc Bệnh viện Da liễu Trung ương</figcaption>
         </figure>
         <CurrentLeaders headingLevel="h3" />
       </div>
