@@ -1,6 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Reveal from "../common/Reveal";
 import { CurrentLeaders, Generations } from "./LeaderLists";
 
@@ -74,7 +75,19 @@ export default function LeadershipTabs() {
         aria-labelledby="tab-current"
         hidden={activeTab !== "current"}
       >
-        <CurrentLeaders headingLevel="h2" />
+        <figure className="team-photo">
+          <div className="team-photo__img">
+            <Image
+              src="/images/lanh-dao/ban-giam-doc.jpg"
+              alt="Ban Giám đốc Bệnh viện Da liễu Trung ương"
+              fill
+              sizes="(max-width: 1200px) 100vw, 1160px"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+          <figcaption>Ban Giám đốc Bệnh viện Da liễu Trung ương (ảnh trong Kỷ yếu 40 năm)</figcaption>
+        </figure>
+        <CurrentLeaders headingLevel="h3" />
       </div>
       <div
         className="tab-panel"
@@ -83,7 +96,7 @@ export default function LeadershipTabs() {
         aria-labelledby="tab-history"
         hidden={activeTab !== "history"}
       >
-        <Generations headingLevel="h2" />
+        <Generations headingLevel="h3" />
       </div>
     </>
   );

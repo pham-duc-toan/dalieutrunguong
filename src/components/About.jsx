@@ -32,15 +32,16 @@ export default function About({ variant = "full" }) {
         <div className="about">
           <Reveal className="about__text">
             <p className="lead">
-              Bệnh viện Da liễu Trung ương là bệnh viện chuyên khoa trực thuộc Bộ Y tế, tiền thân là{" "}
-              <strong>Viện Da liễu Việt Nam</strong> được thành lập năm 1982. Trải qua hơn 40 năm, bệnh viện đã trở
-              thành trung tâm hàng đầu cả nước về chẩn đoán, điều trị các bệnh da, bệnh lây truyền qua đường tình dục,
-              bệnh phong và thẩm mỹ da.
+              Bệnh viện Da liễu Trung ương là bệnh viện chuyên khoa hạng I trực thuộc Bộ Y tế. Lịch sử bệnh viện gắn
+              liền với Khoa Da liễu – Bệnh viện Bạch Mai (1954) và <strong>Viện Da liễu Việt Nam</strong> thành lập
+              ngày 28/01/1982, sau đó là Viện Da liễu Quốc gia (2006) và mang tên Bệnh viện Da liễu Trung ương từ năm
+              2009.
             </p>
             <p>
-              Bệnh viện đồng thời là cơ sở đào tạo, thực hành cho các trường đại học y, là đầu mối chỉ đạo tuyến và
-              triển khai các chương trình quốc gia trong lĩnh vực Da liễu; tích cực hợp tác quốc tế và ứng dụng những kỹ
-              thuật tiên tiến nhất vào khám, chữa bệnh.
+              Với 150 giường bệnh, 27 khoa, phòng, trung tâm và hơn 400 cán bộ, nhân viên, bệnh viện là địa chỉ tin cậy
+              trong quản lý, điều trị các bệnh tự miễn, bệnh da viêm mạn tính, ung thư da, phẫu thuật tạo hình – thẩm
+              mỹ, ứng dụng laser, ánh sáng trị liệu; đồng thời là đơn vị đầu ngành về đào tạo, nghiên cứu khoa học, chỉ
+              đạo tuyến và hợp tác quốc tế.
             </p>
 
             <div className="info-list">
@@ -62,7 +63,7 @@ export default function About({ variant = "full" }) {
             <div className="photo photo--main">
               <Cover
                 src={hospital.images.main}
-                alt={`Toàn cảnh ${hospital.name}`}
+                alt={hospital.images.mainAlt}
                 tone="teal"
                 label="Ảnh toàn cảnh bệnh viện"
                 sizes="(max-width: 960px) 90vw, 45vw"
@@ -71,7 +72,7 @@ export default function About({ variant = "full" }) {
             <div className="photo photo--sub">
               <Cover
                 src={hospital.images.sub}
-                alt="Hoạt động chuyên môn tại bệnh viện"
+                alt={hospital.images.subAlt}
                 tone="sand"
                 label="Ảnh hoạt động chuyên môn"
                 sizes="(max-width: 960px) 50vw, 25vw"

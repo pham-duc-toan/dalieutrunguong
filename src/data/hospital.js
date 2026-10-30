@@ -1,7 +1,7 @@
 /**
  * Thông tin chung & nội dung các mục Giới thiệu / Thành tựu.
- * LƯU Ý: số liệu, mốc thời gian, khen thưởng là DỮ LIỆU MẪU – cần đối chiếu
- * với thông tin chính thức của bệnh viện trước khi công bố.
+ * Nguồn: Kỷ yếu "Bệnh viện Da liễu Trung ương – 40 năm xây dựng, hội nhập và phát triển" (2022).
+ * Số liệu nhân lực, quy mô là số liệu tại thời điểm biên soạn Kỷ yếu – cập nhật nếu đã thay đổi.
  */
 
 export const hospital = {
@@ -13,19 +13,22 @@ export const hospital = {
   city: "Hà Nội",
   website: "dalieu.vn",
   authority: "Bộ Y tế",
+  rank: "Bệnh viện chuyên khoa hạng I",
   /** Ảnh mục Giới thiệu – đặt trong /public/images, để trống sẽ hiện khung màu */
   images: {
-    main: "",
-    sub: "",
+    main: "/images/gioi-thieu/khanh-thanh-toa-nha-ky-thuat-cao.jpg",
+    mainAlt: "Lễ khánh thành tòa nhà Kỹ thuật cao Bệnh viện Da liễu Trung ương năm 2016",
+    sub: "/images/gioi-thieu/ghep-te-bao-dieu-tri-bach-bien.jpg",
+    subAlt: "Kỹ thuật ghép tế bào thượng bì tự thân điều trị bạch biến",
   },
 };
 
 /* ---------- Đầu trang ---------- */
 export const heroStats = [
   { value: 40, suffix: "+", label: "Năm xây dựng & phát triển" },
-  { value: 1, suffix: " triệu+", label: "Lượt khám mỗi năm" },
-  { value: 30, suffix: "+", label: "Khoa, phòng, trung tâm" },
-  { value: 63, suffix: "", label: "Tỉnh, thành được chỉ đạo tuyến" },
+  { value: 27, suffix: "", label: "Khoa, phòng, trung tâm" },
+  { value: 402, suffix: "", label: "Cán bộ, nhân viên" },
+  { value: 63, suffix: "/63", label: "Tỉnh, thành loại trừ bệnh phong" },
 ];
 
 /* ---------- 01. Giới thiệu chung ---------- */
@@ -33,13 +36,14 @@ export const infoItems = [
   { icon: "pin", label: "Địa chỉ", value: hospital.address },
   { icon: "globe", label: "Website", value: hospital.website },
   { icon: "building", label: "Cơ quan chủ quản", value: hospital.authority },
+  { icon: "star", label: "Phân hạng", value: hospital.rank },
 ];
 
 export const missionVisionValues = [
   {
     icon: "star",
     title: "Sứ mệnh",
-    text: "Cung cấp dịch vụ chăm sóc, điều trị bệnh da liễu chất lượng cao, an toàn, lấy người bệnh làm trung tâm.",
+    text: "Chăm sóc, bảo vệ sức khỏe nhân dân; là tuyến cao nhất về khám bệnh, chữa bệnh, phục hồi chức năng chuyên khoa Da liễu cho người bệnh trong và ngoài nước.",
   },
   {
     icon: "eye",
@@ -54,41 +58,97 @@ export const missionVisionValues = [
 ];
 
 export const duties = [
-  { title: "Khám, chữa bệnh", text: "Tuyến cao nhất về chẩn đoán, điều trị bệnh da, bệnh lây truyền qua đường tình dục, bệnh phong." },
-  { title: "Đào tạo", text: "Đào tạo đại học, sau đại học và đào tạo liên tục cho cán bộ chuyên ngành trên cả nước." },
-  { title: "Nghiên cứu khoa học", text: "Triển khai đề tài các cấp, ứng dụng kỹ thuật mới và công nghệ cao trong điều trị." },
-  { title: "Chỉ đạo tuyến", text: "Hỗ trợ chuyên môn, chuyển giao kỹ thuật cho mạng lưới Da liễu các tỉnh, thành phố." },
-  { title: "Phòng bệnh", text: "Đầu mối các chương trình quốc gia về phòng chống bệnh phong và bệnh da cộng đồng." },
-  { title: "Hợp tác quốc tế", text: "Kết nối với các tổ chức, bệnh viện, trường đại học uy tín trong khu vực và thế giới." },
+  {
+    title: "Khám, chữa bệnh",
+    text: "Tuyến cao nhất về cấp cứu, khám bệnh, chữa bệnh, phục hồi chức năng chuyên khoa Da liễu; triển khai các dịch vụ kỹ thuật cao, kỹ thuật mới.",
+  },
+  {
+    title: "Đào tạo",
+    text: "Cơ sở thực hành của Đại học Y Hà Nội và nhiều trường Y Dược; đào tạo sau đại học, đào tạo liên tục (mã B62) cho y bác sĩ cả nước.",
+  },
+  {
+    title: "Nghiên cứu khoa học",
+    text: "Thực hiện đề tài cấp Nhà nước, cấp Bộ, thử nghiệm lâm sàng đa trung tâm; ứng dụng khoa học, kỹ thuật hiện đại phục vụ người bệnh.",
+  },
+  {
+    title: "Chỉ đạo tuyến",
+    text: "Đơn vị đầu ngành chỉ đạo tuyến (Quyết định 4026/QĐ-BYT); chuyển giao kỹ thuật theo Đề án 1816, phát triển mạng lưới Da liễu toàn quốc.",
+  },
+  {
+    title: "Phòng chống dịch bệnh",
+    text: "Đứng đầu Chương trình phòng chống phong Quốc gia; phòng chống các bệnh lây truyền qua đường tình dục và dịch bệnh.",
+  },
+  {
+    title: "Hợp tác quốc tế",
+    text: "Hợp tác với WHO, CDC Hoa Kỳ, Đại học Oxford, các Hội chống phong quốc tế và nhiều trường đại học, bệnh viện trên thế giới.",
+  },
 ];
 
 /* ---------- 02. Thành tựu nổi bật ---------- */
 export const featuredAchievement = {
   tag: "Chương trình quốc gia",
   title: "Loại trừ bệnh phong trên quy mô toàn quốc",
-  text: "Là đơn vị đầu mối Chương trình phòng chống bệnh phong, góp phần quan trọng giúp Việt Nam đạt tiêu chuẩn loại trừ bệnh phong ở quy mô quốc gia.",
-  year: 1995,
-  yearLabel: "Năm đạt mục tiêu loại trừ",
+  text: "Là đơn vị đứng đầu Chương trình phòng chống phong Quốc gia, cùng toàn ngành đưa Việt Nam đạt tiêu chuẩn loại trừ bệnh phong của WHO năm 2000; đến năm 2015, 63/63 tỉnh, thành hoàn thành loại trừ phong tuyến tỉnh.",
+  year: 2000,
+  yearLabel: "Loại trừ bệnh phong theo tiêu chuẩn WHO",
 };
 
 export const achievements = [
-  { icon: "flask", title: "Kỹ thuật cao", text: "Làm chủ laser, ánh sáng trị liệu, phẫu thuật Mohs, cấy ghép tế bào trong điều trị bệnh da." },
-  { icon: "chart", title: "Nghiên cứu khoa học", text: "Nhiều đề tài cấp Nhà nước, cấp Bộ; công bố quốc tế và ứng dụng thành công vào thực tiễn." },
-  { icon: "cap", title: "Đào tạo nhân lực", text: "Đào tạo hàng nghìn bác sĩ chuyên khoa, thạc sĩ, tiến sĩ Da liễu cho cả nước." },
-  { icon: "monitor", title: "Chuyển đổi số", text: "Ứng dụng bệnh án điện tử, đặt lịch khám trực tuyến, khám từ xa kết nối các tuyến." },
+  {
+    icon: "flask",
+    title: "Kỹ thuật chuyên sâu",
+    text: "Đơn vị đầu tiên ghép tế bào thượng bì tự thân không qua nuôi cấy điều trị bạch biến; cơ sở duy nhất thực hiện thường quy phẫu thuật Mohs điều trị ung thư da.",
+  },
+  {
+    icon: "chart",
+    title: "Thử nghiệm lâm sàng",
+    text: "Bệnh viện công lập đầu tiên được cấp chứng nhận Thực hành tốt thử thuốc trên lâm sàng (GCP) năm 2019.",
+  },
+  {
+    icon: "cap",
+    title: "Đào tạo nhân lực",
+    text: "Mỗi năm đào tạo thực hành cho hàng nghìn sinh viên, học viên sau đại học; tiếp nhận bác sĩ từ Mỹ, Pháp, Nhật Bản, Lào, Campuchia.",
+  },
+  {
+    icon: "globe",
+    title: "Hội nhập quốc tế",
+    text: "Đăng cai Hội nghị Da liễu châu Á – Australia lần thứ 21 (2014), World Skin Summit (2018); bệnh viện Việt Nam đầu tiên vào “Top 10 Thương hiệu được tin dùng nhất ASIA” (2019).",
+  },
 ];
 
 export const awards = [
-  { title: "Huân chương Lao động", note: "Hạng Nhất, Nhì, Ba" },
-  { title: "Huân chương Độc lập", note: "Ghi nhận những đóng góp to lớn" },
-  { title: "Cờ thi đua Chính phủ", note: "Đơn vị dẫn đầu phong trào thi đua" },
-  { title: "Bằng khen Bộ Y tế", note: "Nhiều năm liên tục" },
+  { title: "Huân chương Lao động hạng Nhất", note: "Năm 2022" },
+  { title: "Huân chương Lao động hạng Nhì", note: "Năm 2002" },
+  { title: "Huân chương Lao động hạng Ba", note: "Năm 1983" },
+  { title: "Đơn vị xuất sắc trong phong trào thi đua", note: "Năm 2018 và 2020" },
+  { title: "Cờ thi đua Chính phủ, Cờ thi đua Bộ Y tế", note: "Cùng nhiều Bằng khen của Nhà nước và ngành Y tế" },
+  { title: "Thầy thuốc Nhân dân, Thầy thuốc Ưu tú", note: "Danh hiệu cao quý trao tặng nhiều cán bộ của Bệnh viện" },
 ];
 
 export const milestones = [
-  { year: "1982", title: "Thành lập Viện Da liễu Việt Nam", text: "Đặt nền móng cho hệ thống chuyên ngành Da liễu cả nước." },
-  { year: "1995", title: "Loại trừ bệnh phong quy mô quốc gia", text: "Dấu mốc quan trọng của Chương trình phòng chống phong." },
-  { year: "2000s", title: "Đổi tên thành Bệnh viện Da liễu Trung ương", text: "Mở rộng quy mô, nâng cao năng lực khám chữa bệnh." },
-  { year: "2010s", title: "Phát triển kỹ thuật cao", text: "Đầu tư hệ thống laser, trung tâm thẩm mỹ da, phẫu thuật da." },
-  { year: "Nay", title: "Hướng tới bệnh viện thông minh", text: "Chuyển đổi số toàn diện, hội nhập quốc tế sâu rộng." },
+  {
+    year: "1954",
+    title: "Thành lập Khoa Da liễu – Bệnh viện Bạch Mai",
+    text: "Tháng 10/1954, GS. Đặng Vũ Hỷ cùng 45 cán bộ từ chiến khu Việt Bắc về tiếp quản, đặt nền móng cho ngành Da liễu.",
+  },
+  {
+    year: "1982",
+    title: "Thành lập Viện Da liễu Việt Nam",
+    text: "Quyết định số 70/BYT-QĐ ngày 28/01/1982 của Bộ Y tế; GS. Lê Kinh Duệ làm Viện trưởng.",
+  },
+  {
+    year: "2006",
+    title: "Thành lập Viện Da liễu Quốc gia",
+    text: "Quyết định số 486/QĐ-TTg ngày 30/3/2006 của Thủ tướng Chính phủ, trực thuộc Bộ Y tế.",
+  },
+  {
+    year: "2009",
+    title: "Đổi tên thành Bệnh viện Da liễu Trung ương",
+    text: "Quyết định số 4453/QĐ-BYT ngày 13/11/2009 của Bộ Y tế.",
+  },
+  {
+    year: "2022",
+    title: "40 năm xây dựng và phát triển",
+    text: "Vinh dự đón nhận Huân chương Lao động hạng Nhất.",
+  },
 ];

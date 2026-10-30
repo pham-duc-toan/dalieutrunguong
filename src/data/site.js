@@ -8,13 +8,14 @@ export const site = {
   name: "Bệnh viện Da liễu Trung ương",
   shortName: "BV Da liễu TW",
   description:
-    "Bệnh viện Da liễu Trung ương – bệnh viện chuyên khoa đầu ngành về Da liễu của Việt Nam, trực thuộc Bộ Y tế. Hơn 40 năm khám chữa bệnh, đào tạo, nghiên cứu khoa học và chỉ đạo tuyến.",
+    "Bệnh viện Da liễu Trung ương – bệnh viện chuyên khoa hạng I, đầu ngành về Da liễu của Việt Nam, trực thuộc Bộ Y tế. Hơn 40 năm khám chữa bệnh, đào tạo, nghiên cứu khoa học và chỉ đạo tuyến.",
   keywords: [
     "Bệnh viện Da liễu Trung ương",
     "bệnh viện da liễu",
     "khám da liễu Hà Nội",
     "chuyên khoa da liễu",
     "Viện Da liễu Việt Nam",
+    "Viện Da liễu Quốc gia",
     "15A Phương Mai",
   ],
   locale: "vi_VN",

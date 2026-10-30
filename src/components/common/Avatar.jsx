@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-/** Lấy 2 chữ cái đầu (bỏ học hàm, học vị): "PGS.TS. Lê Hữu Doanh" → "LD" */
+/** Lấy 2 chữ cái đầu (bỏ học hàm, học vị): "PGS.TS. Lê Hữu Doanh" → "LD", "ThS. Nguyễn Văn Thành" → "NT" */
 function getInitials(name) {
   const words = name
-    .replace(/([A-Z]{1,4}\.\s*)+/g, "")
+    .replace(/([A-Za-z]{1,4}\.\s*)+/g, "")
     .trim()
     .split(/\s+/)
     .filter(Boolean);
@@ -22,7 +22,13 @@ export default function Avatar({ name, photo, small = false }) {
     return small ? (
       <Image className="avatar avatar--sm" src={photo} alt={name} width={48} height={48} />
     ) : (
-      <Image src={photo} alt={name} fill sizes="(max-width: 560px) 50vw, 25vw" style={{ objectFit: "cover" }} />
+      <Image
+        src={photo}
+        alt={name}
+        fill
+        sizes="(max-width: 560px) 50vw, 25vw"
+        style={{ objectFit: "cover", objectPosition: "50% 15%" }}
+      />
     );
   }
   return (
