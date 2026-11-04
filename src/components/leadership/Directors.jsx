@@ -7,7 +7,7 @@ import { directors } from "@/data/leaders";
 const plainName = (name) => name.replace(/^([A-Za-z]{1,4}\.\s*)+/, "");
 
 /**
- * Thanh kế nhiệm: 5 chân dung nối nhau theo dòng thời gian, bấm để tới tiểu sử.
+ * Thanh kế nhiệm: chân dung các đời người đứng đầu nối nhau theo dòng thời gian, bấm để tới tiểu sử.
  * - basePath: trang chứa tiểu sử ("" khi đang ở /lanh-dao, "/lanh-dao" khi đặt ở trang chủ)
  * - title: nhãn nhỏ phía trên thanh (dùng ở trang chủ)
  */
@@ -65,7 +65,7 @@ function DirectorProfile({ d, index }) {
       <div className="dir__body">
         <div className="dir__meta">
           {d.current && <span className="dir__badge">Đương nhiệm</span>}
-          <span>{d.life}</span>
+          {d.life && <span>{d.life}</span>}
         </div>
         <h3 className="dir__name">{d.name}</h3>
         <ul className="dir__titles">
@@ -85,7 +85,7 @@ function DirectorProfile({ d, index }) {
           ))}
         </dl>
 
-        <div className="dir__cols">
+        <div className={`dir__cols ${d.honors.length > 0 ? "" : "dir__cols--single"}`}>
           <div>
             <h4>Dấu ấn công tác</h4>
             <ul className="dir__hl">
@@ -94,17 +94,19 @@ function DirectorProfile({ d, index }) {
               ))}
             </ul>
           </div>
-          <div className="dir__honors">
-            <h4>Khen thưởng tiêu biểu</h4>
-            <ul>
-              {d.honors.map((h) => (
-                <li key={h}>
-                  <Icon name="starFilled" />
-                  {h}
-                </li>
-              ))}
-            </ul>
-          </div>
+          {d.honors.length > 0 && (
+            <div className="dir__honors">
+              <h4>Khen thưởng tiêu biểu</h4>
+              <ul>
+                {d.honors.map((h) => (
+                  <li key={h}>
+                    <Icon name="starFilled" />
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </article>
@@ -118,7 +120,7 @@ export default function Directors() {
       <Reveal className="dirs__head">
         <span className="section__kicker">Các đời Viện trưởng – Giám đốc</span>
         <h2 className="section__title">
-          Năm thế hệ người đứng đầu, <em>một mạch nguồn</em> truyền thống
+          Sáu đời người đứng đầu, <em>một mạch nguồn</em> truyền thống
         </h2>
         <p>
           Từ Khoa Da liễu – Bệnh viện Bạch Mai (1954), Viện Da liễu Việt Nam (1982), Viện Da liễu Quốc gia (2006) đến

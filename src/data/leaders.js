@@ -2,16 +2,100 @@
  * Thế hệ Đảng ủy – Giám đốc.
  * - photo: đường dẫn ảnh, đặt ảnh trong thư mục /public/images/... rồi ghi "/images/ten-anh.jpg".
  *   Để trống "" sẽ hiển thị chữ cái đầu của tên.
- * Nguồn: Kỷ yếu 40 năm (2022). Danh sách "đương nhiệm" là tại thời điểm biên soạn Kỷ yếu –
- * cần cập nhật nếu Ban Giám đốc / Đảng ủy đã thay đổi.
+ * Nguồn: Kỷ yếu 40 năm (2022); Ban Giám đốc đương nhiệm cập nhật theo dalieu.vn (11/2026).
  */
 
+/**
+ * Ban Giám đốc đương nhiệm – mỗi người có trang hồ sơ /lanh-dao/[slug].
+ * education / career: [{ time, text }] theo thứ tự thời gian; honors: [] (để trống thì ẩn mục).
+ * Nguồn: hồ sơ bác sĩ & tin bổ nhiệm trên dalieu.vn, các mục lãnh đạo tiền nhiệm trong Kỷ yếu 40 năm.
+ */
 export const currentLeaders = [
-  { name: "PGS.TS. Nguyễn Văn Thường", role: "Bí thư Đảng ủy – Giám đốc Bệnh viện", featured: true, photo: "/images/lanh-dao/nguyen-van-thuong.jpg" },
-  { name: "PGS.TS. Lê Hữu Doanh", role: "Phó Bí thư Đảng ủy – Phó Giám đốc", photo: "/images/lanh-dao/le-huu-doanh.jpg" },
-  { name: "GS.TS. Nguyễn Hữu Sáu", role: "Phó Giám đốc", photo: "/images/lanh-dao/nguyen-huu-sau.jpg" },
-  { name: "ThS. Nguyễn Văn Thành", role: "Phó Giám đốc", photo: "/images/lanh-dao/nguyen-van-thanh.jpg" },
+  {
+    slug: "le-huu-doanh",
+    name: "PGS.TS. Lê Hữu Doanh",
+    role: "Bí thư Đảng ủy – Giám đốc Bệnh viện",
+    featured: true,
+    photo: "/images/lanh-dao/le-huu-doanh.jpg",
+    intro:
+      "PGS.TS. Lê Hữu Doanh từng phụ trách công tác chỉ đạo tuyến, đào tạo và giữ cương vị Phó Giám đốc Bệnh viện từ năm 2014, Phó Bí thư Đảng ủy từ năm 2015. Ngày 29/6/2022, ông được Bộ trưởng Bộ Y tế bổ nhiệm giữ chức Giám đốc Bệnh viện Da liễu Trung ương, tiếp nối chặng đường đổi mới, nâng tầm chuyên môn và hội nhập quốc tế.",
+    education: [
+      { time: "8/1998", text: "Tốt nghiệp Bác sĩ đa khoa, Trường Đại học Y Hà Nội" },
+      { time: "12/2002", text: "Tốt nghiệp Bác sĩ nội trú, Trường Đại học Y Hà Nội" },
+      { time: "5/2005 – 3/2006", text: "Học Diploma chuyên ngành Da tại Viện Da, Bangkok, Thái Lan" },
+      { time: "3/2013", text: "Tốt nghiệp Tiến sĩ tại Khoa Da, Đại học Y – Đại học Kanazawa, Nhật Bản" },
+      { time: "11/2016", text: "Được phong hàm Phó Giáo sư" },
+    ],
+    career: [
+      { time: "6/2013 – 9/2014", text: "Trưởng phòng Chỉ đạo tuyến" },
+      { time: "2014 – 2015", text: "Giám đốc Trung tâm Đào tạo và Chỉ đạo tuyến" },
+      { time: "2014 – 2022", text: "Phó Giám đốc Bệnh viện" },
+      { time: "Từ 2015", text: "Phó Bí thư Đảng ủy Bệnh viện; hiện là Bí thư Đảng ủy" },
+      { time: "6/2022 – nay", text: "Giám đốc Bệnh viện theo Quyết định số 1716/QĐ-BYT ngày 29/6/2022 của Bộ trưởng Bộ Y tế" },
+      { time: "10/2023 – nay", text: "Trưởng Bộ môn Da liễu, Trường Đại học Y Hà Nội" },
+    ],
+    honors: [],
+  },
+  {
+    slug: "pham-thi-minh-phuong",
+    name: "TS.BS. Phạm Thị Minh Phương",
+    role: "Phó Giám đốc Bệnh viện",
+    photo: "/images/lanh-dao/pham-thi-minh-phuong.jpg",
+    intro:
+      "TS.BS. Phạm Thị Minh Phương gắn bó lâu năm với Bệnh viện, từng phụ trách công tác nghiên cứu khoa học – hợp tác quốc tế, chỉ đạo tuyến và đào tạo trước khi giữ cương vị Trưởng khoa Khám bệnh. Tháng 6/2025, bà được Bộ trưởng Bộ Y tế bổ nhiệm giữ chức Phó Giám đốc phụ trách chuyên môn của Bệnh viện.",
+    education: [
+      { time: "8/1996", text: "Tốt nghiệp Bác sĩ đa khoa, Trường Đại học Y Hà Nội" },
+      { time: "12/1998", text: "Hoàn thành chương trình bác sĩ định hướng chuyên khoa Da liễu, Trường Đại học Y Hà Nội" },
+      { time: "5/2004", text: "Thạc sĩ Y tế công cộng, Đại học Emory, Hoa Kỳ" },
+      { time: "3/2008", text: "Hoàn thành khóa học về Da liễu tại Thái Lan" },
+      { time: "7/2014", text: "Tiến sĩ Y học, Viện Vệ sinh Dịch tễ Trung ương" },
+    ],
+    career: [
+      { time: "3/2010 – 4/2017", text: "Trưởng phòng Nghiên cứu khoa học và Hợp tác quốc tế" },
+      { time: "2015 – 2018", text: "Giám đốc Trung tâm Đào tạo và Chỉ đạo tuyến" },
+      { time: "3/2017 – 6/2018", text: "Trưởng phòng Chỉ đạo tuyến" },
+      { time: "Đến 6/2025", text: "Trưởng khoa Khám bệnh" },
+      { time: "6/2025 – nay", text: "Phó Giám đốc Bệnh viện; được bổ nhiệm Phó Giám đốc phụ trách chuyên môn theo Quyết định số 1818/QĐ-BYT ngày 02/6/2025 của Bộ trưởng Bộ Y tế" },
+    ],
+    honors: [],
+  },
+  {
+    slug: "le-huyen-my",
+    name: "TS.BS. Lê Huyền My",
+    role: "Phó Giám đốc phụ trách chuyên môn",
+    photo: "/images/lanh-dao/le-huyen-my.jpg",
+    intro:
+      "TS.BS. Lê Huyền My nhiều năm công tác tại Bệnh viện, từng là Bí thư Đoàn Thanh niên Bệnh viện (2007 – 2012) và Trưởng khoa Hóa sinh, Huyết học và Miễn dịch. Ngày 27/10/2026, bà nhận Quyết định bổ nhiệm giữ chức Phó Giám đốc phụ trách chuyên môn, với định hướng nâng cao chất lượng xét nghiệm, phát triển kỹ thuật chẩn đoán chuyên sâu và đẩy mạnh nghiên cứu khoa học gắn với thực tiễn.",
+    education: [
+      { time: "8/2001", text: "Tốt nghiệp Bác sĩ đa khoa, Trường Đại học Y Hà Nội" },
+      { time: "12/2003", text: "Hoàn thành chương trình bác sĩ định hướng chuyên khoa Da liễu, Trường Đại học Y Hà Nội" },
+      { time: "3/2011", text: "Thạc sĩ chuyên ngành Da liễu, Trường Đại học Y Hà Nội" },
+      { time: "3/2019", text: "Tiến sĩ chuyên ngành Da liễu, Trường Đại học Y Hà Nội" },
+    ],
+    career: [
+      { time: "2007 – 2012", text: "Bí thư Ban Chấp hành Đoàn Thanh niên Bệnh viện" },
+      { time: "Đến 10/2026", text: "Trưởng khoa Hóa sinh, Huyết học và Miễn dịch" },
+      { time: "10/2026 – nay", text: "Phó Giám đốc phụ trách chuyên môn theo Quyết định số 3238/QĐ-BYT ngày 15/10/2026 của Bộ trưởng Bộ Y tế" },
+    ],
+    honors: [],
+  },
+  {
+    slug: "nguyen-van-thanh",
+    name: "ThS. Nguyễn Văn Thành",
+    role: "Phó Giám đốc Bệnh viện",
+    photo: "/images/lanh-dao/nguyen-van-thanh.jpg",
+    intro:
+      "ThS. Nguyễn Văn Thành nhiều năm phụ trách công tác tài chính – kế toán của Bệnh viện với cương vị Trưởng phòng Tài chính Kế toán. Từ năm 2016, ông giữ chức Phó Giám đốc Bệnh viện Da liễu Trung ương.",
+    education: [],
+    career: [
+      { time: "2010 – 2015", text: "Trưởng phòng Tài chính Kế toán" },
+      { time: "2016 – nay", text: "Phó Giám đốc Bệnh viện" },
+    ],
+    honors: ["Huy hiệu 30 năm tuổi Đảng (2022)"],
+  },
 ];
+
+export const getLeaderBySlug = (slug) => currentLeaders.find((person) => person.slug === slug);
 
 export const leaderGenerations = [
   {
@@ -60,21 +144,32 @@ export const leaderGenerations = [
     ],
   },
   {
-    period: "2015 – nay",
+    period: "2015 – 2022",
     title: "Hội nhập và phát triển",
     note: "Khánh thành tòa nhà Kỹ thuật cao (2016), chứng nhận GCP (2019), đón nhận Huân chương Lao động hạng Nhất (2022).",
     people: [
-      { name: "PGS.TS. Nguyễn Văn Thường", role: "Bí thư Đảng ủy – Giám đốc (2015 – nay)", photo: "/images/lanh-dao/nguyen-van-thuong.jpg" },
-      { name: "PGS.TS. Lê Hữu Doanh", role: "Phó Bí thư Đảng ủy – Phó Giám đốc (2014 – nay)", photo: "/images/lanh-dao/le-huu-doanh.jpg" },
-      { name: "GS.TS. Nguyễn Hữu Sáu", role: "Phó Giám đốc (2014 – nay)", photo: "/images/lanh-dao/nguyen-huu-sau.jpg" },
+      { name: "PGS.TS. Nguyễn Văn Thường", role: "Bí thư Đảng ủy – Giám đốc (2015 – 2022)", photo: "/images/lanh-dao/nguyen-van-thuong.jpg" },
+      { name: "PGS.TS. Lê Hữu Doanh", role: "Phó Giám đốc (2014 – 2022), Phó Bí thư Đảng ủy (từ 2015)", photo: "/images/lanh-dao/le-huu-doanh.jpg" },
+      { name: "GS.TS. Nguyễn Hữu Sáu", role: "Phó Giám đốc (từ 2014)", photo: "/images/lanh-dao/nguyen-huu-sau.jpg" },
+      { name: "ThS. Nguyễn Văn Thành", role: "Phó Giám đốc (từ 2016)", photo: "/images/lanh-dao/nguyen-van-thanh.jpg" },
+    ],
+  },
+  {
+    period: "2022 – nay",
+    title: "Đổi mới và nâng tầm",
+    note: "Kiện toàn Ban Giám đốc, phát triển kỹ thuật chuyên sâu; thường niên tổ chức Hội nghị Da liễu toàn quốc và Hội nghị Da liễu thẩm mỹ.",
+    people: [
+      { name: "PGS.TS. Lê Hữu Doanh", role: "Bí thư Đảng ủy – Giám đốc (2022 – nay)", photo: "/images/lanh-dao/le-huu-doanh.jpg" },
       { name: "ThS. Nguyễn Văn Thành", role: "Phó Giám đốc (2016 – nay)", photo: "/images/lanh-dao/nguyen-van-thanh.jpg" },
+      { name: "TS.BS. Phạm Thị Minh Phương", role: "Phó Giám đốc (6/2025 – nay)", photo: "/images/lanh-dao/pham-thi-minh-phuong.jpg" },
+      { name: "TS.BS. Lê Huyền My", role: "Phó Giám đốc phụ trách chuyên môn (2026 – nay)", photo: "/images/lanh-dao/le-huyen-my.jpg" },
     ],
   },
 ];
 
 /**
  * Các đời người đứng đầu (Chủ nhiệm Khoa → Viện trưởng → Giám đốc) – trang /lanh-dao.
- * Tiểu sử tóm lược theo Kỷ yếu 40 năm (tr. 49–53). "nay" = thời điểm biên soạn Kỷ yếu (2022).
+ * Tiểu sử tóm lược theo Kỷ yếu 40 năm (tr. 49–53); PGS.TS. Lê Hữu Doanh theo dalieu.vn và Báo Sức khỏe & Đời sống.
  */
 export const directors = [
   {
@@ -185,10 +280,9 @@ export const directors = [
     id: "nguyen-van-thuong",
     name: "PGS.TS. Nguyễn Văn Thường",
     photo: "/images/lanh-dao/nguyen-van-thuong.jpg",
-    term: "2015 – nay",
+    term: "2015 – 2022",
     life: "Sinh năm 1962",
-    current: true,
-    titles: ["Bí thư Đảng ủy – Giám đốc Bệnh viện Da liễu Trung ương (2015 – nay)", "Trưởng Bộ môn Da liễu, Trường Đại học Y Hà Nội"],
+    titles: ["Bí thư Đảng ủy – Giám đốc Bệnh viện Da liễu Trung ương (2015 – 2022)", "Nguyên Trưởng Bộ môn Da liễu, Trường Đại học Y Hà Nội"],
     facts: [
       { label: "Học hàm, học vị", value: "Phó Giáo sư, Tiến sĩ" },
       { label: "Danh hiệu", value: "Thầy thuốc ưu tú" },
@@ -203,5 +297,29 @@ export const directors = [
       "Trưởng Ban biên tập Kỷ yếu 40 năm Bệnh viện",
     ],
     honors: ["Danh hiệu Thầy thuốc ưu tú", "Bằng khen Bộ Y tế"],
+  },
+  {
+    id: "le-huu-doanh",
+    name: "PGS.TS. Lê Hữu Doanh",
+    photo: "/images/lanh-dao/le-huu-doanh.jpg",
+    term: "2022 – nay",
+    life: "",
+    current: true,
+    titles: ["Bí thư Đảng ủy – Giám đốc Bệnh viện Da liễu Trung ương (2022 – nay)", "Trưởng Bộ môn Da liễu, Trường Đại học Y Hà Nội"],
+    facts: [
+      { label: "Học hàm, học vị", value: "Phó Giáo sư, Tiến sĩ" },
+      { label: "Đào tạo", value: "Đại học Y Hà Nội · Đại học Kanazawa (Nhật Bản)" },
+    ],
+    summary:
+      "Trưởng thành từ Bệnh viện, nhiều năm giữ cương vị Phó Bí thư Đảng ủy – Phó Giám đốc. Ngày 29/6/2022, PGS.TS. Lê Hữu Doanh được Bộ trưởng Bộ Y tế bổ nhiệm giữ chức Giám đốc Bệnh viện Da liễu Trung ương, tiếp nối chặng đường đổi mới, nâng tầm chuyên môn và hội nhập quốc tế.",
+    highlights: [
+      "Tốt nghiệp Bác sĩ đa khoa (1998) và Bác sĩ nội trú (2002), Trường Đại học Y Hà Nội",
+      "Diploma chuyên ngành Da liễu tại Viện Da liễu Bangkok, Thái Lan (2005 – 2006)",
+      "Tiến sĩ Y học tại Đại học Kanazawa, Nhật Bản (2013); Phó Giáo sư (2016)",
+      "Phó Giám đốc Bệnh viện (2014 – 2022)",
+      "Giám đốc Bệnh viện theo Quyết định số 1716/QĐ-BYT ngày 29/6/2022 của Bộ trưởng Bộ Y tế",
+      "Trưởng Bộ môn Da liễu, Trường Đại học Y Hà Nội (từ tháng 10/2023)",
+    ],
+    honors: [],
   },
 ];

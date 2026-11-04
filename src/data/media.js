@@ -26,9 +26,52 @@ export const mediaItems = [
  * Tin tức – mỗi tin có trang riêng tại /tin-tuc/<slug>.
  * - slug: đường dẫn (chữ thường, không dấu, nối bằng "-"), KHÔNG đổi sau khi đã đăng
  * - content: danh sách đoạn văn của bài viết
- * Nội dung tổng hợp từ Kỷ yếu 40 năm; ngày đăng là ngày của quyết định / sự kiện được nêu trong bài.
+ * Tin 2026 tổng hợp từ dalieu.vn; các tin cũ tổng hợp từ Kỷ yếu 40 năm.
+ * Ngày đăng là ngày của quyết định / sự kiện được nêu trong bài.
  */
 export const news = [
+  {
+    slug: "hoi-thao-da-ton-thuong-trong-thuc-hanh-da-lieu",
+    date: "2026-10-30",
+    tag: "Đào tạo",
+    title: "Hội thảo khoa học “Da tổn thương trong thực hành da liễu: Từ cơ chế đến chiến lược chăm sóc toàn diện”",
+    excerpt: "Hội thảo khoa học và đào tạo y khoa liên tục do Bệnh viện phối hợp tổ chức, kết hợp trực tiếp và trực tuyến.",
+    src: "/images/tin-tuc/hoi-thao-da-ton-thuong-2026.jpg",
+    tone: "teal",
+    content: [
+      "Chiều ngày 30/10/2026, Bệnh viện Da liễu Trung ương phối hợp với nhãn hàng Bioderma tổ chức Hội thảo Khoa học và Đào tạo Y khoa liên tục với chủ đề “Da tổn thương trong thực hành da liễu: Từ cơ chế đến chiến lược chăm sóc toàn diện”. Hội thảo diễn ra theo hình thức kết hợp: trực tiếp tại khách sạn JW Marriott Hà Nội và trực tuyến qua nền tảng Zoom.",
+      "PGS.TS. Lê Hữu Doanh – Giám đốc Bệnh viện chủ trì hội thảo, nhấn mạnh yêu cầu cập nhật kiến thức và chăm sóc toàn diện cho người bệnh có tình trạng da tổn thương.",
+      "Chương trình gồm bốn báo cáo chuyên sâu về cơ chế sinh học, nhận diện biểu hiện lâm sàng và yếu tố nguy cơ, các hướng phục hồi – chăm sóc da và cá thể hóa điều trị qua ca lâm sàng, với sự tham gia trình bày của TS.BS. Vũ Nguyệt Minh, BS.CKII. Nguyễn Thị Tuyến, BS. Stéphane Fauverghe và ThS.BSNT. Trịnh Ngọc Phát.",
+    ],
+  },
+  {
+    slug: "hoi-thi-tay-nghe-bac-si-khoi-ngoai-duoc-si-2026",
+    date: "2026-10-30",
+    tag: "Nhân lực",
+    title: "Hội thi tay nghề bác sĩ khối ngoại, dược sĩ năm 2026",
+    excerpt: "Đánh giá năng lực chuyên môn, kỹ năng thực hành, góp phần nâng cao chất lượng đội ngũ cán bộ y tế.",
+    src: "/images/tin-tuc/hoi-thi-tay-nghe-2026.jpg",
+    tone: "sand",
+    content: [
+      "Chiều ngày 30/10/2026, Bệnh viện Da liễu Trung ương tổ chức Hội thi tay nghề bác sĩ khối ngoại, dược sĩ năm 2026 nhằm đánh giá năng lực chuyên môn, kỹ năng thực hành và nâng cao chất lượng đội ngũ cán bộ y tế.",
+      "Nội dung thi gồm kiến thức lý thuyết và kỹ năng thực hành. Các bác sĩ được kiểm tra kiến thức pháp luật, quy định chuyên môn và kỹ năng thực hiện các kỹ thuật chuyên ngành đang triển khai tại Bệnh viện; các dược sĩ được đánh giá kiến thức chuyên môn và khả năng vận dụng vào thực tiễn công tác dược.",
+      "Hội thi được tổ chức nghiêm túc, khách quan, công bằng và minh bạch. Kết quả hội thi là cơ sở để Bệnh viện tiếp tục đào tạo, bồi dưỡng và phát triển nguồn nhân lực, hướng tới đội ngũ bác sĩ, dược sĩ có chuyên môn vững vàng, đáp ứng nhu cầu chăm sóc sức khỏe của người dân.",
+    ],
+  },
+  {
+    slug: "bo-nhiem-pho-giam-doc-phu-trach-chuyen-mon-2026",
+    date: "2026-10-27",
+    tag: "Sự kiện",
+    title: "Công bố quyết định bổ nhiệm Phó Giám đốc phụ trách chuyên môn",
+    excerpt: "TS.BS. Lê Huyền My được Bộ trưởng Bộ Y tế bổ nhiệm giữ chức Phó Giám đốc phụ trách chuyên môn Bệnh viện Da liễu Trung ương.",
+    src: "/images/tin-tuc/bo-nhiem-pho-giam-doc-2026.jpg",
+    tone: "ink",
+    content: [
+      "Chiều ngày 27/10/2026, Bệnh viện Da liễu Trung ương tổ chức Lễ công bố và trao Quyết định số 3238/QĐ-BYT ngày 15/10/2026 của Bộ trưởng Bộ Y tế về việc bổ nhiệm TS.BS. Lê Huyền My, Trưởng khoa Hóa sinh, Huyết học và Miễn dịch, giữ chức Phó Giám đốc phụ trách chuyên môn Bệnh viện.",
+      "Dự buổi lễ có đồng chí Vũ Mạnh Hà – Ủy viên dự khuyết Ban Chấp hành Trung ương Đảng, Phó Bí thư Thường trực Đảng ủy, Thứ trưởng Thường trực Bộ Y tế; đại diện Vụ Tổ chức cán bộ – Bộ Y tế, Trường Đại học Y Hà Nội và chính quyền phường Kim Liên. Về phía Bệnh viện có PGS.TS. Lê Hữu Doanh – Bí thư Đảng ủy, Giám đốc Bệnh viện cùng Ban Giám đốc, Đảng ủy, các đoàn thể và lãnh đạo các khoa, phòng, trung tâm.",
+      "Phát biểu nhận nhiệm vụ, TS.BS. Lê Huyền My cam kết phát huy cao nhất tinh thần trách nhiệm, giữ vững đoàn kết nội bộ, phối hợp chặt chẽ với tập thể lãnh đạo và các đơn vị trong Bệnh viện; tập trung nâng cao chất lượng xét nghiệm, phát triển các kỹ thuật chẩn đoán chuyên sâu, đẩy mạnh nghiên cứu khoa học gắn với ứng dụng thực tiễn, góp phần nâng cao chất lượng khám bệnh, chữa bệnh.",
+    ],
+  },
   {
     slug: "chung-nhan-thuc-hanh-tot-thu-thuoc-tren-lam-sang-gcp",
     date: "2019-10-29",

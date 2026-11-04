@@ -1,5 +1,6 @@
 import { site } from "@/data/site";
 import { news } from "@/data/media";
+import { currentLeaders } from "@/data/leaders";
 
 /** /sitemap.xml – tự sinh từ danh sách trang và tin tức. */
 export default function sitemap() {
@@ -26,5 +27,12 @@ export default function sitemap() {
     priority: 0.6,
   }));
 
-  return [...pages, ...articles];
+  const leaders = currentLeaders.map((person) => ({
+    url: `${site.url}/lanh-dao/${person.slug}`,
+    lastModified: now,
+    changeFrequency: "yearly",
+    priority: 0.6,
+  }));
+
+  return [...pages, ...leaders, ...articles];
 }

@@ -25,6 +25,9 @@ export default function Footer() {
           <address className="footer__col">
             <h2>Liên hệ</h2>
             <span>{hospital.address}</span>
+            <a href={`tel:${hospital.hotline.replace(/\s/g, "")}`}>Tổng đài: {hospital.hotline}</a>
+            <a href={`tel:${hospital.phone.replace(/\s/g, "")}`}>Điện thoại: {hospital.phone}</a>
+            <a href={`mailto:${hospital.email}`}>{hospital.email}</a>
             <span>Website: {hospital.website}</span>
           </address>
         </div>

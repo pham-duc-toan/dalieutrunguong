@@ -49,6 +49,8 @@ export function hospitalJsonLd() {
     description: site.description,
     foundingDate: String(hospital.founded),
     medicalSpecialty: "Dermatology",
+    telephone: hospital.hotline,
+    email: hospital.email,
     address: {
       "@type": "PostalAddress",
       streetAddress: hospital.streetAddress,

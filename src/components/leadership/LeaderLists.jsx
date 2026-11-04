@@ -1,9 +1,11 @@
+import Link from "next/link";
 import Reveal from "../common/Reveal";
 import Avatar from "../common/Avatar";
+import Icon from "../common/Icon";
 import { currentLeaders, leaderGenerations } from "@/data/leaders";
 
 /**
- * Lưới lãnh đạo đương nhiệm (người có featured: true được hiển thị thẻ lớn).
+ * Lưới lãnh đạo đương nhiệm (người có featured: true được hiển thị thẻ lớn); bấm thẻ → trang hồ sơ.
  * headingLevel: thẻ heading cho tên lãnh đạo ("h2" trên trang riêng, "h3" trên trang chủ).
  */
 export function CurrentLeaders({ headingLevel: Heading = "h3" }) {
@@ -16,13 +18,18 @@ export function CurrentLeaders({ headingLevel: Heading = "h3" }) {
           delay={i * 0.07}
           key={i}
         >
-          <div className="leader__photo">
-            <Avatar name={person.name} photo={person.photo} />
-          </div>
-          <div className="leader__body">
-            <Heading>{person.name}</Heading>
-            <p>{person.role}</p>
-          </div>
+          <Link href={`/lanh-dao/${person.slug}`} className="leader__link">
+            <div className="leader__photo">
+              <Avatar name={person.name} photo={person.photo} />
+            </div>
+            <div className="leader__body">
+              <Heading>{person.name}</Heading>
+              <p>{person.role}</p>
+              <span className="leader__more">
+                Xem hồ sơ <Icon name="arrowRight" />
+              </span>
+            </div>
+          </Link>
         </Reveal>
       ))}
     </div>

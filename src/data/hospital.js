@@ -1,17 +1,20 @@
 /**
  * Thông tin chung & nội dung các mục Giới thiệu / Thành tựu.
  * Nguồn: Kỷ yếu "Bệnh viện Da liễu Trung ương – 40 năm xây dựng, hội nhập và phát triển" (2022).
- * Số liệu nhân lực, quy mô là số liệu tại thời điểm biên soạn Kỷ yếu – cập nhật nếu đã thay đổi.
+ * Địa chỉ, liên hệ, cơ cấu tổ chức cập nhật theo dalieu.vn (11/2026).
  */
 
 export const hospital = {
   name: "Bệnh viện Da liễu Trung ương",
   nameEn: "National Hospital of Dermatology & Venereology",
   founded: 1982,
-  address: "15A Phương Mai, Hà Nội",
-  streetAddress: "15A Phương Mai",
+  address: "15A Phương Mai, phường Kim Liên, Hà Nội",
+  streetAddress: "15A Phương Mai, phường Kim Liên",
   city: "Hà Nội",
   website: "dalieu.vn",
+  hotline: "1900 6951",
+  phone: "024 3222 2944",
+  email: "bvdalieutrunguong@gmail.com",
   authority: "Bộ Y tế",
   rank: "Bệnh viện chuyên khoa hạng I",
   /** Ảnh mục Giới thiệu – đặt trong /public/images, để trống sẽ hiện khung màu */
@@ -26,8 +29,8 @@ export const hospital = {
 /* ---------- Đầu trang ---------- */
 export const heroStats = [
   { value: 40, suffix: "+", label: "Năm xây dựng & phát triển" },
-  { value: 27, suffix: "", label: "Khoa, phòng, trung tâm" },
-  { value: 402, suffix: "", label: "Cán bộ, nhân viên" },
+  { value: 28, suffix: "", label: "Khoa, phòng, trung tâm" },
+  { value: 400, suffix: "+", label: "Cán bộ, nhân viên" },
   { value: 63, suffix: "/63", label: "Tỉnh, thành loại trừ bệnh phong" },
 ];
 
@@ -149,6 +152,6 @@ export const milestones = [
   {
     year: "2022",
     title: "40 năm xây dựng và phát triển",
-    text: "Vinh dự đón nhận Huân chương Lao động hạng Nhất.",
+    text: "Vinh dự đón nhận Huân chương Lao động hạng Nhất; PGS.TS. Lê Hữu Doanh được bổ nhiệm Giám đốc Bệnh viện.",
   },
 ];
