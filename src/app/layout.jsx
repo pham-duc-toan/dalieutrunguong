@@ -21,6 +21,8 @@ import "@/styles/page.css";
 import "@/styles/about.css";
 import "@/styles/achievements.css";
 import "@/styles/leadership.css";
+import "@/styles/journey.css";
+import "@/styles/showroom.css";
 import "@/styles/media.css";
 import "@/styles/footer.css";
 

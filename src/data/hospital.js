@@ -1,7 +1,7 @@
 /**
  * Thông tin chung & nội dung các mục Giới thiệu / Thành tựu.
  * Nguồn: Kỷ yếu "Bệnh viện Da liễu Trung ương – 40 năm xây dựng, hội nhập và phát triển" (2022).
- * Địa chỉ, liên hệ, cơ cấu tổ chức cập nhật theo dalieu.vn (11/2026).
+ * Địa chỉ, liên hệ, cơ cấu tổ chức và số liệu 2023 – 2026 cập nhật theo dalieu.vn (11/2026).
  */
 
 export const hospital = {
@@ -28,10 +28,10 @@ export const hospital = {
 
 /* ---------- Đầu trang ---------- */
 export const heroStats = [
-  { value: 40, suffix: "+", label: "Năm xây dựng & phát triển" },
+  { value: 44, suffix: "", label: "Năm xây dựng & phát triển" },
   { value: 28, suffix: "", label: "Khoa, phòng, trung tâm" },
-  { value: 400, suffix: "+", label: "Cán bộ, nhân viên" },
-  { value: 63, suffix: "/63", label: "Tỉnh, thành loại trừ bệnh phong" },
+  { value: 26, suffix: "", label: "Phòng khám chuyên đề vảy nến được hỗ trợ xây dựng" },
+  { value: 13, suffix: "/13", label: "Phòng, trung tâm đạt ISO 9001:2015" },
 ];
 
 /* ---------- 01. Giới thiệu chung ---------- */

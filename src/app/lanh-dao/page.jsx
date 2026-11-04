@@ -15,7 +15,7 @@ export default function LeadershipPage() {
   return (
     <>
       <PageHeader
-        number="03"
+        number="04"
         kicker="Thế hệ Đảng ủy – Giám đốc"
         title={
           <>

@@ -18,7 +18,7 @@
     linear-gradient(180deg, rgba(246, 249, 252, .75) 0%, rgba(246, 249, 252, 0) 20%);
 }
 .hero__tag {
-  position: absolute; z-index: 1; right: 32px; bottom: 168px;
+  position: absolute; z-index: 1; right: 32px; bottom: 206px;
   display: inline-flex; align-items: center; gap: 8px;
   padding: 9px 16px 9px 12px; border-radius: 999px;
   background: rgba(255, 255, 255, .82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
@@ -26,6 +26,15 @@
   font-size: 13px; font-weight: 600; color: var(--ink);
 }
 .hero__tag svg { width: 16px; height: 16px; fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Huy hiệu 45 năm (1982 – 2027) trên ảnh toàn cảnh */
+.hero__badge {
+  position: absolute; z-index: 1; right: 32px; top: calc(var(--header-h) + 26px);
+  display: inline-flex; align-items: center; gap: 12px; padding: 10px 20px 10px 12px; border-radius: 999px;
+  background: linear-gradient(135deg, #f2c37a, #d99a3a); color: #3a2506; box-shadow: 0 14px 34px -12px rgba(217, 154, 58, .9);
+}
+.hero__badge strong { font-family: var(--serif); font-size: 36px; font-weight: 700; line-height: 1; }
+.hero__badge span { font-size: 12px; font-weight: 700; line-height: 1.25; letter-spacing: .02em; }
 
 .hero__inner { position: relative; flex: 1; display: flex; align-items: center; }
 .hero__content { max-width: 680px; }
@@ -90,6 +99,8 @@
   .hero__media::after { background: linear-gradient(0deg, rgba(10, 26, 51, .35) 0%, rgba(10, 26, 51, 0) 40%); }
   .hero__img { object-position: 78% 50%; }
   .hero__tag { left: 14px; right: auto; bottom: 14px; }
+  .hero__badge { right: 14px; top: 14px; padding: 8px 16px 8px 10px; }
+  .hero__badge strong { font-size: 28px; }
   .hero__stats-wrap { order: 2; }
   .stats { margin-top: 28px; grid-template-columns: repeat(2, 1fr); }
   .stats li:nth-child(3) { border-left: 0; }

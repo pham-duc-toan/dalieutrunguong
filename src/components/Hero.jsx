@@ -19,6 +19,14 @@ export default function Hero() {
           quality={85}
           className="hero__img"
         />
+        <span className="hero__badge">
+          <strong>45</strong>
+          <span>
+            năm hình thành
+            <br />
+            và phát triển
+          </span>
+        </span>
         <span className="hero__tag">
           <Icon name="pin" />
           {hospital.address}
@@ -55,7 +63,7 @@ export default function Hero() {
             <span>
               Thành lập Viện Da liễu Việt Nam
               <br />
-              tiền thân của bệnh viện ngày nay
+              Hướng tới kỷ niệm 45 năm · 28/01/2027
             </span>
           </p>
         </Reveal>

@@ -19,7 +19,7 @@ export default function Leadership({ variant = "full" }) {
         {isPreview ? (
           <>
             <SectionHeading
-              number="03"
+              number="04"
               kicker="Thế hệ Đảng ủy – Giám đốc"
               title={
                 <>

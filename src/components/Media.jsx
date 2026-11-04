@@ -15,7 +15,7 @@ export default function Media({ variant = "full" }) {
       <div className="container">
         {isPreview && (
           <SectionHeading
-            number="04"
+            number="05"
             kicker="Media"
             title={
               <>

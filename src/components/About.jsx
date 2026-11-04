@@ -38,7 +38,7 @@ export default function About({ variant = "full" }) {
               2009.
             </p>
             <p>
-              Với 150 giường bệnh, 28 khoa, phòng, trung tâm và hơn 400 cán bộ, nhân viên, bệnh viện là địa chỉ tin cậy
+              Với 28 khoa, phòng, trung tâm, bệnh viện là địa chỉ tin cậy
               trong quản lý, điều trị các bệnh tự miễn, bệnh da viêm mạn tính, ung thư da, phẫu thuật tạo hình – thẩm
               mỹ, ứng dụng laser, ánh sáng trị liệu; đồng thời là đơn vị đầu ngành về đào tạo, nghiên cứu khoa học, chỉ
               đạo tuyến và hợp tác quốc tế.

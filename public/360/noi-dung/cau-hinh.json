@@ -1,0 +1,282 @@
+{
+ "schemaVersion": 1,
+ "revision": 1,
+ "metadata": {
+  "hospitalName": "BỆNH VIỆN DA LIỄU TRUNG ƯƠNG",
+  "title": "PHÒNG TRUYỀN THỐNG",
+  "brandColor": "#3971b6",
+  "disclaimer": "PHỐI CẢNH THIẾT KẾ PHÒNG TRUYỀN THỐNG"
+ },
+ "assets": {
+  "panorama": "hinh-anh/toan-canh.png",
+  "logo": "hinh-anh/logo.jpg",
+  "video": ""
+ },
+ "book": {
+  "title": "",
+  "pdf": "",
+  "pages": []
+ },
+ "zones": [
+  {
+   "id": "main",
+   "name": "Sảnh truyền thống",
+   "u": 0.518,
+   "v": 0.49,
+   "kind": "content",
+   "articleIds": [],
+   "textFile": "noi-dung/khu-trung-bay/main.txt"
+  },
+  {
+   "id": "history",
+   "name": "Lịch sử hình thành và phát triển",
+   "u": 0.236,
+   "v": 0.5,
+   "kind": "content",
+   "articleIds": [
+    "h0",
+    "h1",
+    "h2",
+    "h3",
+    "new"
+   ],
+   "textFile": "noi-dung/khu-trung-bay/history.txt"
+  },
+  {
+   "id": "party",
+   "name": "Đảng ủy qua các thời kỳ",
+   "u": 0.35,
+   "v": 0.5,
+   "kind": "content",
+   "articleIds": [
+    "partyArticle"
+   ],
+   "textFile": "noi-dung/khu-trung-bay/party.txt"
+  },
+  {
+   "id": "board",
+   "name": "Ban Giám đốc qua các thời kỳ",
+   "u": 0.659,
+   "v": 0.5,
+   "kind": "content",
+   "articleIds": [
+    "dir-dang-vu-hy",
+    "dir-le-kinh-due",
+    "dir-pham-van-hien",
+    "dir-tran-hau-khang",
+    "dir-nguyen-van-thuong",
+    "dir-le-huu-doanh"
+   ],
+   "textFile": "noi-dung/khu-trung-bay/board.txt"
+  },
+  {
+   "id": "awards",
+   "name": "Giải thưởng và phần thưởng cao quý",
+   "u": 0.82,
+   "v": 0.5,
+   "kind": "content",
+   "articleIds": [
+    "honor"
+   ],
+   "textFile": "noi-dung/khu-trung-bay/awards.txt"
+  },
+  {
+   "id": "achievements",
+   "name": "Thành tựu nổi bật",
+   "u": 0.88,
+   "v": 0.51,
+   "kind": "content",
+   "articleIds": [
+    "qualityArticle",
+    "network",
+    "specialty",
+    "team"
+   ],
+   "textFile": "noi-dung/khu-trung-bay/achievements.txt"
+  },
+  {
+   "id": "activities",
+   "name": "Hoạt động tiêu biểu của Bệnh viện",
+   "u": 0.132,
+   "v": 0.5,
+   "kind": "content",
+   "articleIds": [
+    "activityCommunity",
+    "activityPatients",
+    "activityTeaching"
+   ],
+   "textFile": "noi-dung/khu-trung-bay/activities.txt"
+  },
+  {
+   "id": "symbol",
+   "name": "Biểu tượng 45 năm và cành liễu",
+   "u": 0.5,
+   "v": 0.68,
+   "kind": "content",
+   "articleIds": [],
+   "textFile": "noi-dung/khu-trung-bay/symbol.txt"
+  }
+ ],
+ "exhibits": [
+  {
+   "id": "h0",
+   "label": "NGUỒN CỘI",
+   "title": "Những nền móng trước năm 1982",
+   "image": "hinh-anh/bai-viet/h0.jpg",
+   "caption": "Ảnh tư liệu lịch sử",
+   "textFile": "noi-dung/bai-viet/h0.txt"
+  },
+  {
+   "id": "h1",
+   "label": "1982 – 2005",
+   "title": "Xây dựng Viện Da liễu Việt Nam",
+   "image": "hinh-anh/bai-viet/h1.jpg",
+   "caption": "Ảnh tư liệu lịch sử",
+   "textFile": "noi-dung/bai-viet/h1.txt"
+  },
+  {
+   "id": "h2",
+   "label": "2006 – 2009",
+   "title": "Kiện toàn tổ chức đầu ngành",
+   "image": "",
+   "caption": "",
+   "textFile": "noi-dung/bai-viet/h2.txt"
+  },
+  {
+   "id": "h3",
+   "label": "2009 – 2022",
+   "title": "Phát triển chuyên sâu và hội nhập",
+   "image": "hinh-anh/bai-viet/h3.jpg",
+   "caption": "Lễ khánh thành tòa nhà Kỹ thuật cao, năm 2016",
+   "textFile": "noi-dung/bai-viet/h3.txt"
+  },
+  {
+   "id": "new",
+   "label": "2022",
+   "title": "Chuyển giao trách nhiệm Giám đốc",
+   "image": "hinh-anh/bai-viet/new.jpg",
+   "caption": "Lễ công bố quyết định bổ nhiệm Giám đốc Bệnh viện, ngày 20/7/2022",
+   "textFile": "noi-dung/bai-viet/new.txt"
+  },
+  {
+   "id": "partyArticle",
+   "label": "ĐẢNG BỘ BỆNH VIỆN",
+   "title": "Đại hội Đảng bộ lần thứ V, nhiệm kỳ 2025 – 2030",
+   "image": "",
+   "caption": "",
+   "textFile": "noi-dung/bai-viet/partyArticle.txt"
+  },
+  {
+   "id": "dir-dang-vu-hy",
+   "label": "THẾ HỆ 1954 – 1972",
+   "title": "GS. Đặng Vũ Hỷ",
+   "image": "hinh-anh/bai-viet/dir-dang-vu-hy.jpg",
+   "caption": "GS. Đặng Vũ Hỷ · 1954 – 1972",
+   "textFile": "noi-dung/bai-viet/dir-dang-vu-hy.txt"
+  },
+  {
+   "id": "dir-le-kinh-due",
+   "label": "THẾ HỆ 1972 – 1994",
+   "title": "GS. Lê Kinh Duệ",
+   "image": "hinh-anh/bai-viet/dir-le-kinh-due.jpg",
+   "caption": "GS. Lê Kinh Duệ · 1972 – 1994",
+   "textFile": "noi-dung/bai-viet/dir-le-kinh-due.txt"
+  },
+  {
+   "id": "dir-pham-van-hien",
+   "label": "THẾ HỆ 1995 – 2008",
+   "title": "PGS.TS. Phạm Văn Hiển",
+   "image": "hinh-anh/bai-viet/dir-pham-van-hien.jpg",
+   "caption": "PGS.TS. Phạm Văn Hiển · 1995 – 2008",
+   "textFile": "noi-dung/bai-viet/dir-pham-van-hien.txt"
+  },
+  {
+   "id": "dir-tran-hau-khang",
+   "label": "THẾ HỆ 2008 – 2015",
+   "title": "GS.TS. Trần Hậu Khang",
+   "image": "hinh-anh/bai-viet/dir-tran-hau-khang.jpg",
+   "caption": "GS.TS. Trần Hậu Khang · 2008 – 2015",
+   "textFile": "noi-dung/bai-viet/dir-tran-hau-khang.txt"
+  },
+  {
+   "id": "dir-nguyen-van-thuong",
+   "label": "THẾ HỆ 2015 – 2022",
+   "title": "PGS.TS. Nguyễn Văn Thường",
+   "image": "hinh-anh/bai-viet/dir-nguyen-van-thuong.jpg",
+   "caption": "PGS.TS. Nguyễn Văn Thường · 2015 – 2022",
+   "textFile": "noi-dung/bai-viet/dir-nguyen-van-thuong.txt"
+  },
+  {
+   "id": "dir-le-huu-doanh",
+   "label": "THẾ HỆ 2022 – NAY",
+   "title": "PGS.TS. Lê Hữu Doanh",
+   "image": "hinh-anh/bai-viet/dir-le-huu-doanh.jpg",
+   "caption": "PGS.TS. Lê Hữu Doanh · 2022 – nay",
+   "textFile": "noi-dung/bai-viet/dir-le-huu-doanh.txt"
+  },
+  {
+   "id": "honor",
+   "label": "THÀNH TÍCH VÀ GHI NHẬN",
+   "title": "Những phần thưởng ghi dấu hành trình",
+   "image": "hinh-anh/bai-viet/honor.jpg",
+   "caption": "Lễ đón nhận Huân chương Lao động",
+   "textFile": "noi-dung/bai-viet/honor.txt"
+  },
+  {
+   "id": "qualityArticle",
+   "label": "QUẢN LÝ CHẤT LƯỢNG",
+   "title": "Chứng chỉ ISO 15189:2022",
+   "image": "hinh-anh/bai-viet/quality.jpg",
+   "caption": "Lễ trao chứng chỉ ISO 15189:2022, ngày 30/12/2024",
+   "textFile": "noi-dung/bai-viet/qualityArticle.txt"
+  },
+  {
+   "id": "network",
+   "label": "MẠNG LƯỚI CHUYÊN KHOA",
+   "title": "Phòng khám chuyên đề vảy nến",
+   "image": "hinh-anh/bai-viet/network.jpg",
+   "caption": "Hội nghị khoa học – giao ban hệ thống phòng khám chuyên đề vảy nến 2024 – 2025",
+   "textFile": "noi-dung/bai-viet/network.txt"
+  },
+  {
+   "id": "specialty",
+   "label": "NĂNG LỰC CHUYÊN SÂU",
+   "title": "Ba khoa lâm sàng chuyên sâu",
+   "image": "hinh-anh/bai-viet/specialty.jpg",
+   "caption": "Lễ công bố thành lập, kiện toàn ba khoa chuyên sâu, ngày 24/4/2026",
+   "textFile": "noi-dung/bai-viet/specialty.txt"
+  },
+  {
+   "id": "team",
+   "label": "TỔ CHỨC MỚI",
+   "title": "Nhóm chuyên môn và Phòng tiêm chủng",
+   "image": "hinh-anh/bai-viet/team.jpg",
+   "caption": "Lễ công bố quyết định thành lập, ngày 20/10/2026",
+   "textFile": "noi-dung/bai-viet/team.txt"
+  },
+  {
+   "id": "activityCommunity",
+   "label": "HOẠT ĐỘNG CỘNG ĐỒNG",
+   "title": "Giám sát phòng, chống phong tại Lâm Đồng",
+   "image": "hinh-anh/bai-viet/community.jpg",
+   "caption": "Thăm người bệnh tại Khu điều trị bệnh phong Di Linh",
+   "textFile": "noi-dung/bai-viet/activityCommunity.txt"
+  },
+  {
+   "id": "activityPatients",
+   "label": "ĐỒNG HÀNH NGƯỜI BỆNH",
+   "title": "Ngày Vảy nến Thế giới 2026",
+   "image": "hinh-anh/bai-viet/patients.jpg",
+   "caption": "Chương trình sinh hoạt người bệnh, ngày 25/10/2026",
+   "textFile": "noi-dung/bai-viet/activityPatients.txt"
+  },
+  {
+   "id": "activityTeaching",
+   "label": "ĐÀO TẠO VÀ NHÂN LỰC",
+   "title": "Bệnh viện và nhà trường cùng phát triển",
+   "image": "hinh-anh/bai-viet/teaching.jpg",
+   "caption": "Lễ công bố quyết định lãnh đạo quản lý Trường Đại học Y Hà Nội, tháng 10/2023",
+   "textFile": "noi-dung/bai-viet/activityTeaching.txt"
+  }
+ ]
+}

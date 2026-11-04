@@ -30,8 +30,9 @@ export const currentLeaders = [
       { time: "6/2013 – 9/2014", text: "Trưởng phòng Chỉ đạo tuyến" },
       { time: "2014 – 2015", text: "Giám đốc Trung tâm Đào tạo và Chỉ đạo tuyến" },
       { time: "2014 – 2022", text: "Phó Giám đốc Bệnh viện" },
-      { time: "Từ 2015", text: "Phó Bí thư Đảng ủy Bệnh viện; hiện là Bí thư Đảng ủy" },
-      { time: "6/2022 – nay", text: "Giám đốc Bệnh viện theo Quyết định số 1716/QĐ-BYT ngày 29/6/2022 của Bộ trưởng Bộ Y tế" },
+      { time: "Từ 2015", text: "Phó Bí thư Đảng ủy Bệnh viện" },
+      { time: "9/2022 – nay", text: "Giám đốc Bệnh viện theo Quyết định số 1716/QĐ-BYT ngày 29/6/2022 của Bộ trưởng Bộ Y tế, có hiệu lực từ ngày 01/9/2022" },
+      { time: "2025 – 2030", text: "Bí thư Đảng ủy Bệnh viện (Đại hội Đảng bộ lần thứ V)" },
       { time: "10/2023 – nay", text: "Trưởng Bộ môn Da liễu, Trường Đại học Y Hà Nội" },
     ],
     honors: [],
@@ -39,7 +40,7 @@ export const currentLeaders = [
   {
     slug: "pham-thi-minh-phuong",
     name: "TS.BS. Phạm Thị Minh Phương",
-    role: "Phó Giám đốc Bệnh viện",
+    role: "Phó Giám đốc – Phó Bí thư Đảng ủy",
     photo: "/images/lanh-dao/pham-thi-minh-phuong.jpg",
     intro:
       "TS.BS. Phạm Thị Minh Phương gắn bó lâu năm với Bệnh viện, từng phụ trách công tác nghiên cứu khoa học – hợp tác quốc tế, chỉ đạo tuyến và đào tạo trước khi giữ cương vị Trưởng khoa Khám bệnh. Tháng 6/2025, bà được Bộ trưởng Bộ Y tế bổ nhiệm giữ chức Phó Giám đốc phụ trách chuyên môn của Bệnh viện.",
@@ -56,6 +57,7 @@ export const currentLeaders = [
       { time: "3/2017 – 6/2018", text: "Trưởng phòng Chỉ đạo tuyến" },
       { time: "Đến 6/2025", text: "Trưởng khoa Khám bệnh" },
       { time: "6/2025 – nay", text: "Phó Giám đốc Bệnh viện; được bổ nhiệm Phó Giám đốc phụ trách chuyên môn theo Quyết định số 1818/QĐ-BYT ngày 02/6/2025 của Bộ trưởng Bộ Y tế" },
+      { time: "2025 – 2030", text: "Phó Bí thư Đảng ủy Bệnh viện (Đại hội Đảng bộ lần thứ V)" },
     ],
     honors: [],
   },
@@ -74,7 +76,8 @@ export const currentLeaders = [
     ],
     career: [
       { time: "2007 – 2012", text: "Bí thư Ban Chấp hành Đoàn Thanh niên Bệnh viện" },
-      { time: "Đến 10/2026", text: "Trưởng khoa Hóa sinh, Huyết học và Miễn dịch" },
+      { time: "3/2023 – 10/2026", text: "Trưởng khoa Hóa sinh, Huyết học và Miễn dịch" },
+      { time: "2025 – 2030", text: "Ủy viên Ban Thường vụ Đảng ủy Bệnh viện" },
       { time: "10/2026 – nay", text: "Phó Giám đốc phụ trách chuyên môn theo Quyết định số 3238/QĐ-BYT ngày 15/10/2026 của Bộ trưởng Bộ Y tế" },
     ],
     honors: [],
@@ -82,14 +85,15 @@ export const currentLeaders = [
   {
     slug: "nguyen-van-thanh",
     name: "ThS. Nguyễn Văn Thành",
-    role: "Phó Giám đốc Bệnh viện",
+    role: "Phó Giám đốc phụ trách kinh tế",
     photo: "/images/lanh-dao/nguyen-van-thanh.jpg",
     intro:
-      "ThS. Nguyễn Văn Thành nhiều năm phụ trách công tác tài chính – kế toán của Bệnh viện với cương vị Trưởng phòng Tài chính Kế toán. Từ năm 2016, ông giữ chức Phó Giám đốc Bệnh viện Da liễu Trung ương.",
+      "ThS. Nguyễn Văn Thành nhiều năm phụ trách công tác tài chính – kế toán của Bệnh viện với cương vị Trưởng phòng Tài chính Kế toán. Từ năm 2016, ông giữ chức Phó Giám đốc Bệnh viện Da liễu Trung ương; ngày 09/01/2026, ông được Bộ trưởng Bộ Y tế bổ nhiệm lại giữ chức Phó Giám đốc phụ trách kinh tế.",
     education: [],
     career: [
       { time: "2010 – 2015", text: "Trưởng phòng Tài chính Kế toán" },
       { time: "2016 – nay", text: "Phó Giám đốc Bệnh viện" },
+      { time: "1/2026", text: "Được bổ nhiệm lại Phó Giám đốc phụ trách kinh tế theo Quyết định số 3909/QĐ-BYT ngày 22/12/2025 của Bộ trưởng Bộ Y tế" },
     ],
     honors: ["Huy hiệu 30 năm tuổi Đảng (2022)"],
   },
@@ -160,9 +164,9 @@ export const leaderGenerations = [
     note: "Kiện toàn Ban Giám đốc, phát triển kỹ thuật chuyên sâu; thường niên tổ chức Hội nghị Da liễu toàn quốc và Hội nghị Da liễu thẩm mỹ.",
     people: [
       { name: "PGS.TS. Lê Hữu Doanh", role: "Bí thư Đảng ủy – Giám đốc (2022 – nay)", photo: "/images/lanh-dao/le-huu-doanh.jpg" },
-      { name: "ThS. Nguyễn Văn Thành", role: "Phó Giám đốc (2016 – nay)", photo: "/images/lanh-dao/nguyen-van-thanh.jpg" },
-      { name: "TS.BS. Phạm Thị Minh Phương", role: "Phó Giám đốc (6/2025 – nay)", photo: "/images/lanh-dao/pham-thi-minh-phuong.jpg" },
-      { name: "TS.BS. Lê Huyền My", role: "Phó Giám đốc phụ trách chuyên môn (2026 – nay)", photo: "/images/lanh-dao/le-huyen-my.jpg" },
+      { name: "ThS. Nguyễn Văn Thành", role: "Phó Giám đốc phụ trách kinh tế", photo: "/images/lanh-dao/nguyen-van-thanh.jpg" },
+      { name: "TS.BS. Phạm Thị Minh Phương", role: "Phó Giám đốc – Phó Bí thư Đảng ủy (6/2025 – nay)", photo: "/images/lanh-dao/pham-thi-minh-phuong.jpg" },
+      { name: "TS.BS. Lê Huyền My", role: "Phó Giám đốc phụ trách chuyên môn (10/2026 – nay)", photo: "/images/lanh-dao/le-huyen-my.jpg" },
     ],
   },
 ];
@@ -317,7 +321,7 @@ export const directors = [
       "Diploma chuyên ngành Da liễu tại Viện Da liễu Bangkok, Thái Lan (2005 – 2006)",
       "Tiến sĩ Y học tại Đại học Kanazawa, Nhật Bản (2013); Phó Giáo sư (2016)",
       "Phó Giám đốc Bệnh viện (2014 – 2022)",
-      "Giám đốc Bệnh viện theo Quyết định số 1716/QĐ-BYT ngày 29/6/2022 của Bộ trưởng Bộ Y tế",
+      "Giám đốc Bệnh viện theo Quyết định số 1716/QĐ-BYT ngày 29/6/2022 của Bộ trưởng Bộ Y tế, có hiệu lực từ ngày 01/9/2022",
       "Trưởng Bộ môn Da liễu, Trường Đại học Y Hà Nội (từ tháng 10/2023)",
     ],
     honors: [],

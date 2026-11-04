@@ -1,0 +1,95 @@
+/* ---------- Chặng đường 2022 – 2026 · hướng tới 45 năm ---------- */
+
+/* Thanh 1982 → 2027 */
+.annv {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 28px; align-items: center;
+  margin-bottom: 48px; padding: 26px 32px; border-radius: 24px;
+  background: var(--surface); box-shadow: var(--shadow-sm);
+}
+.annv__end { display: flex; flex-direction: column; gap: 2px; }
+.annv__end strong { font-family: var(--serif); font-size: 32px; font-weight: 600; line-height: 1; color: var(--primary); }
+.annv__end span { font-size: 13px; color: var(--muted); }
+.annv__end--goal { text-align: right; }
+.annv__end--goal strong { color: var(--accent); }
+.annv__track { position: relative; height: 8px; border-radius: 999px; background: var(--primary-soft); }
+.annv__fill { position: absolute; inset: 0 auto 0 0; width: 99%; border-radius: inherit; background: linear-gradient(90deg, var(--primary-2), var(--primary) 70%, var(--accent)); }
+.annv__dot {
+  position: absolute; top: 50%; left: 99%; width: 22px; height: 22px; border-radius: 50%; transform: translate(-50%, -50%);
+  background: #fff; border: 4px solid var(--accent); box-shadow: 0 0 0 8px rgba(217, 154, 58, .18);
+}
+
+/* Thẻ dấu mốc */
+.jgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.jcard {
+  display: flex; flex-direction: column; overflow: hidden; border-radius: var(--radius);
+  background: var(--surface); box-shadow: var(--shadow-sm);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.jcard:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.jcard__photo { position: relative; aspect-ratio: 16 / 10; background: linear-gradient(160deg, var(--primary-soft), #cbe4f6); overflow: hidden; }
+.jcard__photo img { transition: transform .8s var(--ease); }
+.jcard:hover .jcard__photo img { transform: scale(1.04); }
+.jcard__body { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 8px; }
+.jcard__date { font-size: 12.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); }
+.jcard__body :is(h2, h3) { font-size: 18px; line-height: 1.35; }
+.jcard__body p { font-size: 14.5px; line-height: 1.65; color: var(--ink-2); }
+.journey:not(.journey--full) .jcard__body p { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* Trang đầy đủ: theo từng năm */
+.journey--full .annv { margin-bottom: 64px; }
+.jyears { display: grid; gap: 56px; }
+.jyear { display: grid; grid-template-columns: 170px 1fr; gap: 40px; align-items: start; }
+.jyear__label { position: sticky; top: calc(var(--header-h) + 24px); }
+.jyear__label span {
+  display: block; font-family: var(--serif); font-size: clamp(56px, 7vw, 96px); font-weight: 600; line-height: .95;
+  color: transparent; -webkit-text-stroke: 1.5px var(--primary-2);
+}
+.jyear__items { position: relative; display: grid; gap: 24px; padding-left: 36px; }
+.jyear__items::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(180deg, var(--primary-2), var(--line)); }
+.jcard--row { position: relative; flex-direction: row; overflow: visible; }
+.jcard--row .jcard__photo { border-radius: var(--radius) 0 0 var(--radius); }
+.jcard--row::before {
+  content: ""; position: absolute; left: -36px; top: 26px; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--surface); border: 3px solid var(--primary-2); z-index: 1;
+}
+.jcard--row .jcard__photo { flex: 0 0 38%; aspect-ratio: auto; min-height: 220px; }
+.jcard--row .jcard__body { flex: 1; justify-content: center; padding: 26px 30px; }
+.jcard--row .jcard__body :is(h2, h3) { font-size: 20px; }
+.jcard--text { border-left: 4px solid var(--primary-2); }
+.jcard--text .jcard__body { padding: 24px 30px; }
+
+.jyear--goal .jyear__label span { -webkit-text-stroke-color: var(--accent); }
+.jyear--goal .jyear__items::before { background: linear-gradient(180deg, var(--accent), transparent); }
+.jgoal {
+  position: relative; padding: 34px 36px; border-radius: var(--radius); color: #fff;
+  background: linear-gradient(150deg, #2d9cdb 0%, #0b6fb8 55%, #0a3a66 100%);
+}
+.jgoal::before {
+  content: ""; position: absolute; left: -36px; top: 30px; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent); border: 3px solid #fff; box-shadow: 0 0 0 4px rgba(217, 154, 58, .25);
+}
+.jgoal strong { font-family: var(--serif); font-size: 15px; font-weight: 600; letter-spacing: .06em; color: #f2c37a; }
+.jgoal :is(h2, h3) { margin: 6px 0 10px; font-family: var(--serif); font-size: 28px; font-weight: 600; }
+.jgoal p { max-width: 62ch; color: rgba(255, 255, 255, .85); }
+
+@media (max-width: 1100px) {
+  .jgrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .jyear { grid-template-columns: 1fr; gap: 20px; }
+  .jyear__label { position: static; }
+  .jyear__label span { font-size: 64px; }
+  .jcard--row { flex-direction: column; }
+  .jcard--row .jcard__photo { flex: none; aspect-ratio: 16 / 10; min-height: 0; border-radius: var(--radius) var(--radius) 0 0; }
+}
+@media (max-width: 640px) {
+  .annv { grid-template-columns: 1fr 1fr; gap: 14px 12px; padding: 22px 20px; }
+  .annv__track { grid-column: 1 / -1; order: 3; }
+  .annv__end strong { font-size: 26px; }
+  .jgrid { grid-template-columns: 1fr; }
+  .jyear__items { padding-left: 28px; }
+  .jcard--row::before, .jgoal::before { left: -28px; }
+  .jcard--row .jcard__body, .jcard--text .jcard__body { padding: 20px; }
+  .jgoal { padding: 26px 22px; }
+  .jgoal :is(h2, h3) { font-size: 23px; }
+}
