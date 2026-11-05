@@ -1,0 +1,70 @@
+/* Khung nội dung Phòng truyền thống 360° – cùng màu, font với website; nội dung là chính trang web (iframe) */
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-display: swap; font-weight: 400; src: url(../font/be-vietnam-pro-vietnamese-400-normal.woff2) format("woff2"); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-display: swap; font-weight: 400; src: url(../font/be-vietnam-pro-latin-400-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-display: swap; font-weight: 500; src: url(../font/be-vietnam-pro-vietnamese-500-normal.woff2) format("woff2"); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-display: swap; font-weight: 500; src: url(../font/be-vietnam-pro-latin-500-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-display: swap; font-weight: 600; src: url(../font/be-vietnam-pro-vietnamese-600-normal.woff2) format("woff2"); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-display: swap; font-weight: 600; src: url(../font/be-vietnam-pro-latin-600-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-display: swap; font-weight: 700; src: url(../font/be-vietnam-pro-vietnamese-700-normal.woff2) format("woff2"); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-display: swap; font-weight: 700; src: url(../font/be-vietnam-pro-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Lora"; font-style: normal; font-display: swap; font-weight: 400 700; src: url(../font/lora-vietnamese-wght-normal.woff2) format("woff2-variations"); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: "Lora"; font-style: normal; font-display: swap; font-weight: 400 700; src: url(../font/lora-latin-wght-normal.woff2) format("woff2-variations"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+:root {
+  --ink: #0b2233; --ink-2: #33495a; --muted: #6b7f8c; --line: #e2e9ec; --bg: #f6f9fc;
+  --primary: #0b6fb8; --primary-2: #2d9cdb; --primary-soft: #e0f0fb; --accent: #d99a3a; --accent-soft: #fbf0dc;
+  --shadow-sm: 0 1px 2px rgba(11, 34, 51, .06), 0 2px 8px rgba(11, 34, 51, .04);
+  --shadow: 0 10px 30px -12px rgba(11, 34, 51, .18), 0 4px 10px -6px rgba(11, 34, 51, .08);
+  --shadow-lg: 0 30px 60px -20px rgba(11, 34, 51, .28);
+  --font: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Lora", Georgia, serif;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+body, button, select { font-family: var(--font); }
+.brand strong, #loading b { font-family: var(--serif); font-weight: 600; }
+
+
+/* ---------- Khung nội dung ---------- */
+dialog {
+  width: min(1240px, 96vw); height: 92vh; max-height: 92vh; padding: 0; border-radius: 24px; overflow: hidden;
+  background: var(--bg); color: var(--ink); box-shadow: 0 40px 120px -20px rgba(10, 26, 51, .55);
+}
+dialog[open] { display: flex; flex-direction: column; animation: tb-in .35s var(--ease); }
+@keyframes tb-in { from { opacity: 0; transform: translateY(16px) scale(.98); } }
+dialog::backdrop { background: rgba(10, 26, 51, .55); backdrop-filter: blur(6px); }
+
+.dialog-head {
+  position: static; flex: none; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 12px 14px 12px 26px; background: #fff; border-bottom: 1px solid var(--line);
+}
+.reader-title { display: flex; flex-direction: column; min-width: 0; }
+.reader-title small { font-size: 11.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.reader-title strong { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: var(--serif); font-size: 20px; font-weight: 600; color: var(--ink); }
+.reader-actions { display: flex; align-items: center; gap: 8px; flex: none; }
+.dialog-head .reader-btn {
+  display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border: 1px solid var(--line); border-radius: 999px;
+  background: #fff; color: var(--primary); font-size: 13.5px; font-weight: 600; text-decoration: none; white-space: nowrap; cursor: pointer;
+}
+.dialog-head .reader-btn:hover { background: var(--primary-soft); }
+.dialog-head .reader-btn--primary { border-color: var(--primary); background: var(--primary); color: #fff; }
+.dialog-head .reader-btn--primary:hover { background: #095c99; }
+.dialog-head .reader-btn[hidden] { display: none; }
+.dialog-head #close {
+  width: 40px; height: 40px; padding: 0; display: grid; place-items: center; border-radius: 50%;
+  border: 1px solid var(--line); background: #fff; color: var(--ink); font-size: 22px; line-height: 1; transition: background .2s, transform .2s;
+}
+.dialog-head #close:hover { background: var(--primary-soft); transform: rotate(90deg); }
+
+.dialog-body { position: relative; flex: 1; min-height: 0; padding: 0; }
+.reader-frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: var(--bg); opacity: 0; transition: opacity .3s; }
+.dialog-body.is-loaded .reader-frame { opacity: 1; }
+.reader-loading { position: absolute; inset: 0; display: flex; flex-direction: column; gap: 14px; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; }
+
+@media (max-width: 640px) {
+  dialog { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; border-radius: 0; }
+  .dialog-head { padding: 10px 10px 10px 16px; gap: 8px; }
+  .reader-title strong { font-size: 16px; }
+  .dialog-head .reader-btn { height: 36px; padding: 0 12px; font-size: 12.5px; }
+  .dialog-head .reader-btn--primary { display: none; }
+  .dialog-head #close { width: 36px; height: 36px; }
+}

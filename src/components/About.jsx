@@ -3,7 +3,7 @@ import Icon from "./common/Icon";
 import Cover from "./common/Cover";
 import MoreLink from "./common/MoreLink";
 import SectionHeading from "./common/SectionHeading";
-import { hospital, infoItems, missionVisionValues, duties } from "@/data/hospital";
+import { hospital, aboutText, infoItems, missionVisionValues, duties } from "@/data/hospital";
 
 /**
  * 01. Giới thiệu chung
@@ -31,18 +31,11 @@ export default function About({ variant = "full" }) {
 
         <div className="about">
           <Reveal className="about__text">
-            <p className="lead">
-              Bệnh viện Da liễu Trung ương là bệnh viện chuyên khoa hạng I trực thuộc Bộ Y tế. Lịch sử bệnh viện gắn
-              liền với Khoa Da liễu – Bệnh viện Bạch Mai (1954) và <strong>Viện Da liễu Việt Nam</strong> thành lập
-              ngày 28/01/1982, sau đó là Viện Da liễu Quốc gia (2006) và mang tên Bệnh viện Da liễu Trung ương từ năm
-              2009.
-            </p>
-            <p>
-              Với 28 khoa, phòng, trung tâm, bệnh viện là địa chỉ tin cậy
-              trong quản lý, điều trị các bệnh tự miễn, bệnh da viêm mạn tính, ung thư da, phẫu thuật tạo hình – thẩm
-              mỹ, ứng dụng laser, ánh sáng trị liệu; đồng thời là đơn vị đầu ngành về đào tạo, nghiên cứu khoa học, chỉ
-              đạo tuyến và hợp tác quốc tế.
-            </p>
+            {aboutText.map((text, i) => (
+              <p className={i === 0 ? "lead" : undefined} key={i}>
+                {text}
+              </p>
+            ))}
 
             <div className="info-list">
               {infoItems.map((item) => (

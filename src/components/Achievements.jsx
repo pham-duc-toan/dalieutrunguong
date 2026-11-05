@@ -60,7 +60,7 @@ export default function Achievements({ variant = "full" }) {
         ) : (
           <>
             {/* Phần thưởng */}
-            <Reveal className="awards">
+            <Reveal className="awards" id="phan-thuong">
               <div className="awards__head">
                 <Heading>Phần thưởng cao quý</Heading>
                 <p>Được Đảng, Nhà nước và Bộ Y tế ghi nhận qua nhiều danh hiệu, phần thưởng.</p>
@@ -79,7 +79,7 @@ export default function Achievements({ variant = "full" }) {
             </Reveal>
 
             {/* Dòng thời gian */}
-            <div className="timeline">
+            <div className="timeline" id="lich-su">
               <Reveal as={Heading} className="timeline__title">
                 Hành trình phát triển
               </Reveal>

@@ -71,3 +71,7 @@
 }
 .skip-link:focus { transform: none; }
 .footer address { font-style: normal; }
+
+/* ---------- Trang mở trong Phòng truyền thống 360° ---------- */
+html.in-frame { --header-h: 0px; }
+html.in-frame :is(.header, .footer, .skip-link, .back-top, .crumbs, .showroom-tour) { display: none; }

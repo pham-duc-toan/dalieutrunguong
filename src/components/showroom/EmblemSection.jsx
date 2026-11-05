@@ -1,6 +1,6 @@
 import Reveal from "../common/Reveal";
 import Emblem3D from "./Emblem3D";
-import { anniversary } from "@/data/journey";
+import { emblemText } from "@/data/showroom";
 
 /** Khối biểu tượng 45 năm dạng 3D (tự xoay, kéo để xoay tay). */
 export default function EmblemSection() {
@@ -16,10 +16,7 @@ export default function EmblemSection() {
           <h2 className="section__title">
             <em>45 năm</em> và cành liễu
           </h2>
-          <p>
-            Khối số 45 đặt trên bệ trắng cùng cành liễu là biểu tượng hướng tới ngày kỷ niệm {anniversary.years} năm thành
-            lập Viện Da liễu Việt Nam, từ {anniversary.founded} đến {anniversary.date}.
-          </p>
+          <p>{emblemText}</p>
         </Reveal>
       </div>
     </section>

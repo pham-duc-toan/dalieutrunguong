@@ -35,6 +35,11 @@ export const heroStats = [
 ];
 
 /* ---------- 01. Giới thiệu chung ---------- */
+export const aboutText = [
+  "Bệnh viện Da liễu Trung ương là bệnh viện chuyên khoa hạng I trực thuộc Bộ Y tế. Lịch sử bệnh viện gắn liền với Khoa Da liễu – Bệnh viện Bạch Mai (1954) và Viện Da liễu Việt Nam thành lập ngày 28/01/1982, sau đó là Viện Da liễu Quốc gia (2006) và mang tên Bệnh viện Da liễu Trung ương từ năm 2009.",
+  "Với 28 khoa, phòng, trung tâm, bệnh viện là địa chỉ tin cậy trong quản lý, điều trị các bệnh tự miễn, bệnh da viêm mạn tính, ung thư da, phẫu thuật tạo hình – thẩm mỹ, ứng dụng laser, ánh sáng trị liệu; đồng thời là đơn vị đầu ngành về đào tạo, nghiên cứu khoa học, chỉ đạo tuyến và hợp tác quốc tế.",
+];
+
 export const infoItems = [
   { icon: "pin", label: "Địa chỉ", value: hospital.address },
   { icon: "globe", label: "Website", value: hospital.website },

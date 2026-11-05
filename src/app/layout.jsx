@@ -59,8 +59,10 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="vi">
+    <html lang="vi" suppressHydrationWarning>
       <head>
+        {/* Trang được mở trong Phòng truyền thống 360° (khung iframe) → ẩn menu, chân trang (xem page.css) */}
+        <script dangerouslySetInnerHTML={{ __html: "if(window.self!==window.top)document.documentElement.classList.add('in-frame')" }} />
         {/* Trình duyệt tắt JavaScript vẫn thấy đầy đủ nội dung */}
         <noscript>
           <style>{`.reveal{opacity:1!important;transform:none!important}`}</style>

@@ -3,6 +3,7 @@ import Reveal from "@/components/common/Reveal";
 import Tour360 from "@/components/showroom/Tour360";
 import EmblemSection from "@/components/showroom/EmblemSection";
 import { pageMetadata } from "@/lib/seo";
+import { showroomZones } from "@/data/showroom";
 
 const PATH = "/phong-truyen-thong";
 
@@ -14,16 +15,8 @@ export const metadata = pageMetadata({
   image: "/images/phong-truyen-thong-toan-canh.jpg",
 });
 
-const zones = [
-  { n: "01", title: "Lịch sử hình thành và phát triển", text: "Từ Khoa Da liễu Bệnh viện Bạch Mai năm 1954 đến Bệnh viện Da liễu Trung ương." },
-  { n: "02", title: "Đảng ủy qua các thời kỳ", text: "Tổ chức Đảng của Bệnh viện và Đại hội Đảng bộ nhiệm kỳ 2025 – 2030." },
-  { n: "03", title: "Ban Giám đốc qua các thời kỳ", text: "Sáu thế hệ người đứng đầu, từ GS. Đặng Vũ Hỷ đến PGS.TS. Lê Hữu Doanh." },
-  { n: "04", title: "Giải thưởng và phần thưởng cao quý", text: "Huân chương Lao động hạng Ba, hạng Nhì và hạng Nhất." },
-  { n: "05", title: "Thành tựu nổi bật", text: "Chất lượng xét nghiệm, mạng lưới phòng khám chuyên đề, các khoa chuyên sâu mới." },
-  { n: "06", title: "Hoạt động tiêu biểu", text: "Phòng, chống phong, đồng hành cùng người bệnh, đào tạo và nghiên cứu khoa học." },
-  { n: "07", title: "Sảnh truyền thống", text: "Điểm bắt đầu hành trình tham quan." },
-  { n: "08", title: "Biểu tượng 45 năm", text: "Biểu tượng kỷ niệm 45 năm cùng cành liễu ở trung tâm không gian." },
-];
+// Sảnh là điểm bắt đầu tham quan, không phải khu trưng bày
+const zones = showroomZones.filter((zone) => zone.id !== "main");
 
 export default function ShowroomPage() {
   return (
@@ -40,7 +33,7 @@ export default function ShowroomPage() {
         crumbs={[{ name: "Phòng truyền thống 360°", path: PATH }]}
       />
 
-      <section className="section section--flush">
+      <section className="section section--flush showroom-tour">
         <div className="container">
           <Reveal>
             <Tour360 />
@@ -53,10 +46,10 @@ export default function ShowroomPage() {
             </Reveal>
             <ul className="zones__grid">
               {zones.map((zone, i) => (
-                <Reveal as="li" delay={(i % 4) * 0.06} key={zone.n}>
-                  <b>{zone.n}</b>
-                  <h3>{zone.title}</h3>
-                  <p>{zone.text}</p>
+                <Reveal as="li" delay={(i % 4) * 0.06} key={zone.id}>
+                  <b>{String(i + 1).padStart(2, "0")}</b>
+                  <h3>{zone.name}</h3>
+                  <p>{zone.body}</p>
                 </Reveal>
               ))}
             </ul>
