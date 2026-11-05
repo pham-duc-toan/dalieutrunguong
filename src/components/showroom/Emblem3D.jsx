@@ -20,51 +20,63 @@ export default function Emblem3D({ className = "" }) {
     const start = async () => {
       setState("loading");
       try {
-        const THREE = await import("three");
-        const { GLTFLoader } = await import("three/examples/jsm/loaders/GLTFLoader.js");
-        const { OrbitControls } = await import("three/examples/jsm/controls/OrbitControls.js");
+        const [THREE, { OrbitControls }, { RoomEnvironment }, { FontLoader }, { TextGeometry }, { RoundedBoxGeometry }, fontJson, { buildEmblem }] =
+          await Promise.all([
+            import("three"),
+            import("three/examples/jsm/controls/OrbitControls.js"),
+            import("three/examples/jsm/environments/RoomEnvironment.js"),
+            import("three/examples/jsm/loaders/FontLoader.js"),
+            import("three/examples/jsm/geometries/TextGeometry.js"),
+            import("three/examples/jsm/geometries/RoundedBoxGeometry.js"),
+            import("three/examples/fonts/helvetiker_bold.typeface.json"),
+            import("./emblemScene"),
+          ]);
         if (disposed) return;
 
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        // Vẽ tối thiểu gấp đôi số điểm ảnh rồi thu nhỏ → cạnh mịn cả trên màn hình thường
+        renderer.setPixelRatio(Math.min(3, Math.max(2, window.devicePixelRatio)));
         renderer.outputColorSpace = THREE.SRGBColorSpace;
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.05;
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
         host.appendChild(renderer.domElement);
 
         const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 50);
-        camera.position.set(0, 0.9, 4.6);
+        const pmrem = new THREE.PMREMGenerator(renderer);
+        const envTexture = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+        scene.environment = envTexture;
 
-        scene.add(new THREE.HemisphereLight(0xffffff, 0x9fb7cf, 1.5));
-        const key = new THREE.DirectionalLight(0xffffff, 2.4);
-        key.position.set(2.5, 3.5, 3);
+        const key = new THREE.DirectionalLight(0xffffff, 2.2);
+        key.position.set(2.5, 5, 3.5);
+        key.castShadow = true;
+        key.shadow.mapSize.set(2048, 2048);
+        key.shadow.radius = 4;
+        key.shadow.bias = -0.0004;
+        Object.assign(key.shadow.camera, { left: -2.5, right: 2.5, top: 3.5, bottom: -0.5, near: 0.5, far: 15 });
         scene.add(key);
-        const rim = new THREE.DirectionalLight(0x8fd0ff, 1.2);
-        rim.position.set(-3, 1.5, -2);
+        const rim = new THREE.DirectionalLight(0x8fd0ff, 1.4);
+        rim.position.set(-3, 2, -2.5);
         scene.add(rim);
+
+        const font = new FontLoader().parse(fontJson.default ?? fontJson);
+        const { group: model, height } = buildEmblem(THREE, TextGeometry, RoundedBoxGeometry, font);
+        scene.add(model);
+
+        const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 60);
+        const targetY = height * 0.47;
+        camera.position.set(0, targetY + 0.9, height * 2.75);
 
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableZoom = false;
         controls.enablePan = false;
         controls.enableDamping = true;
         controls.autoRotate = true;
-        controls.autoRotateSpeed = 1.6;
-        controls.minPolarAngle = Math.PI * 0.28;
-        controls.maxPolarAngle = Math.PI * 0.56;
-        controls.target.set(0, 0, 0);
-
-        const gltf = await new GLTFLoader().loadAsync("/models/bieu-tuong-45-nam.glb");
-        if (disposed) {
-          renderer.dispose();
-          return;
-        }
-        const model = gltf.scene;
-        const box = new THREE.Box3().setFromObject(model);
-        const size = box.getSize(new THREE.Vector3());
-        const center = box.getCenter(new THREE.Vector3());
-        const scale = 1.9 / Math.max(size.x, size.y, size.z);
-        model.scale.setScalar(scale);
-        model.position.sub(center.multiplyScalar(scale));
-        scene.add(model);
+        controls.autoRotateSpeed = 1.4;
+        controls.minPolarAngle = Math.PI * 0.3;
+        controls.maxPolarAngle = Math.PI * 0.55;
+        controls.target.set(0, targetY, 0);
 
         const resize = () => {
           const { clientWidth: w, clientHeight: h } = host;
@@ -102,6 +114,8 @@ export default function Emblem3D({ className = "" }) {
             if (obj.geometry) obj.geometry.dispose();
             if (obj.material) [].concat(obj.material).forEach((m) => m.dispose());
           });
+          envTexture.dispose();
+          pmrem.dispose();
           renderer.dispose();
           renderer.domElement.remove();
         };

@@ -62,7 +62,7 @@
 .emblem-section { overflow: hidden; background: radial-gradient(900px 500px at 25% 50%, #dcecf9, transparent 70%), var(--bg); }
 .emblem-section__inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
 .emblem-section__stage { position: relative; height: clamp(340px, 42vw, 520px); border-radius: 28px; overflow: hidden; box-shadow: var(--shadow-lg); background: radial-gradient(circle at 50% 38%, #2d9cdb 0%, #0b6fb8 45%, #0a2a52 100%); }
-.emblem-section__hint { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-size: 13px; color: rgba(255, 255, 255, .8); }
+.emblem-section__hint { position: absolute; left: 0; right: 0; top: 16px; text-align: center; font-size: 13px; color: rgba(255, 255, 255, .8); }
 .emblem-section__text .section__title { margin: 12px 0 18px; }
 .emblem-section__text p { max-width: 50ch; font-size: 17px; color: var(--ink-2); }
 
