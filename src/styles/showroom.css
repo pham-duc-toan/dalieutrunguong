@@ -70,3 +70,15 @@
   .emblem-section__inner { grid-template-columns: 1fr; gap: 24px; }
   .emblem-section__stage { height: 340px; }
 }
+
+/* ---------- Trang riêng từng khu (/phong-truyen-thong/[khu]) ---------- */
+.timeline--solo, .awards--solo { margin-top: 0; }
+.zone-sub { margin-top: 96px; }
+.dirs + .zone-sub { margin-top: 0; }
+.leaders.leaders--three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1020px) {
+  .leaders.leaders--three { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .zone-sub { margin-top: 64px; }
+}

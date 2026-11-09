@@ -1,6 +1,6 @@
 'use strict';
-// Khung nội dung của Phòng truyền thống 360°: mỗi khu mở chính trang tương ứng của website
-// (cùng giao diện, đủ chi tiết; menu và chân trang tự ẩn khi nằm trong khung).
+// Khung nội dung của Phòng truyền thống 360°: mỗi khu mở trang riêng /phong-truyen-thong/[khu]
+// chỉ gồm nội dung của khu đó, cùng giao diện website (menu và chân trang tự ẩn khi nằm trong khung).
 // Nạp trước viewer.js; viewer.js gọi openZone() khi bấm điểm khu hoặc nút "Xem nội dung khu".
 
 const tbReader = (() => {

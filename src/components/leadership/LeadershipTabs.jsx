@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Reveal from "../common/Reveal";
 import { CurrentLeaders, Generations } from "./LeaderLists";
@@ -18,11 +18,6 @@ export default function LeadershipTabs() {
   const [activeTab, setActiveTab] = useState("current");
   const tabRefs = useRef({});
   const [ink, setInk] = useState({ width: 0, left: 0 });
-
-  // /lanh-dao#cac-the-he (vd khu Đảng ủy trong Phòng truyền thống 360°) → mở sẵn tab các thế hệ
-  useEffect(() => {
-    if (window.location.hash === "#cac-the-he") setActiveTab("history");
-  }, []);
 
   // Thanh nền trượt theo tab đang chọn
   useLayoutEffect(() => {

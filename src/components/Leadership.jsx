@@ -34,7 +34,7 @@ export default function Leadership({ variant = "full" }) {
         ) : (
           <>
             <Directors />
-            <Reveal className="dirs__head dirs__head--team" id="cac-the-he">
+            <Reveal className="dirs__head dirs__head--team">
               <span className="section__kicker">Ban lãnh đạo bệnh viện</span>
               <h2 className="section__title">
                 Đảng ủy – Ban Giám đốc <em>qua các thời kỳ</em>
