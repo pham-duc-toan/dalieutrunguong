@@ -41,10 +41,7 @@ export default async function ZonePage({ params }) {
         kicker={index ? "Phòng truyền thống" : "Phòng truyền thống · Sảnh"}
         title={<ZoneTitle text={zone.title} />}
         lead={zone.lead ?? zone.body}
-        crumbs={[
-          { name: "Phòng truyền thống 360°", path: BASE },
-          { name: zone.name, path: `${BASE}/${zone.slug}` },
-        ]}
+        crumbs={[{ name: zone.name, path: `${BASE}/${zone.slug}` }]}
       />
       <ZoneContent id={zone.id} />
     </>

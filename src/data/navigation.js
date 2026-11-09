@@ -5,5 +5,5 @@ export const navItems = [
   { href: "/chang-duong", label: "Chặng đường 45 năm" },
   { href: "/lanh-dao", label: "Đảng ủy – Giám đốc" },
   { href: "/media", label: "Media" },
-  { href: "/phong-truyen-thong", label: "Phòng truyền thống" },
+  { href: "/", label: "Phòng truyền thống" },
 ];

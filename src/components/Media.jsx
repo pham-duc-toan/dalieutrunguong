@@ -4,7 +4,7 @@ import NewsList from "./media/NewsList";
 
 /**
  * 04. Media
- * variant="preview": trang chủ (có tiêu đề mục)
+ * variant="preview": trang Giới thiệu chung (có tiêu đề mục)
  * variant="full":    trang /media (tiêu đề nằm ở PageHeader)
  */
 export default function Media({ variant = "full" }) {

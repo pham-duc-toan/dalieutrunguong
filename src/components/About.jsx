@@ -7,17 +7,19 @@ import { hospital, aboutText, infoItems, missionVisionValues, duties } from "@/d
 
 /**
  * 01. Giới thiệu chung
- * variant="preview": trang chủ (có tiêu đề mục + nút xem thêm, không có chức năng nhiệm vụ)
- * variant="full":    trang /gioi-thieu (tiêu đề nằm ở PageHeader)
+ * variant="preview": bản tóm tắt (có tiêu đề mục + nút xem thêm, không có chức năng nhiệm vụ)
+ * variant="full":    đầy đủ, có chức năng nhiệm vụ
+ * withHeading: hiện tiêu đề mục (khi đặt dưới Hero của trang /gioi-thieu)
  */
-export default function About({ variant = "full" }) {
+export default function About({ variant = "full", withHeading = false }) {
   const isPreview = variant === "preview";
-  const Heading = isPreview ? "h3" : "h2";
+  const showHeading = isPreview || withHeading;
+  const Heading = showHeading ? "h3" : "h2";
 
   return (
     <section className={`section ${isPreview ? "" : "section--flush"}`} id="gioi-thieu">
       <div className="container">
-        {isPreview && (
+        {showHeading && (
           <SectionHeading
             number="01"
             kicker="Giới thiệu chung"
@@ -99,7 +101,11 @@ export default function About({ variant = "full" }) {
           <MoreLink href="/gioi-thieu">Xem giới thiệu đầy đủ</MoreLink>
         ) : (
           <Reveal className="duties">
-            <h2 className="duties__title">Chức năng &amp; nhiệm vụ</h2>
+            {showHeading ? (
+              <h3 className="duties__title">Chức năng &amp; nhiệm vụ</h3>
+            ) : (
+              <h2 className="duties__title">Chức năng &amp; nhiệm vụ</h2>
+            )}
             <div className="duties__grid">
               {duties.map((duty, i) => (
                 <div className="duty" key={duty.title}>

@@ -13,7 +13,6 @@ export default function sitemap() {
     { path: "/chang-duong", priority: 0.8, changeFrequency: "monthly" },
     { path: "/lanh-dao", priority: 0.8, changeFrequency: "monthly" },
     { path: "/media", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/phong-truyen-thong", priority: 0.7, changeFrequency: "monthly" },
     { path: "/tin-tuc", priority: 0.7, changeFrequency: "weekly" },
   ].map((page) => ({
     url: `${site.url}${page.path}`,

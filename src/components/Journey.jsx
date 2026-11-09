@@ -34,7 +34,7 @@ function JourneyPhoto({ item, sizes }) {
 
 /**
  * Chặng đường 2022 – 2026, hướng tới kỷ niệm 45 năm.
- * variant="preview": trang chủ (6 dấu mốc có ảnh + nút xem thêm)
+ * variant="preview": trang Giới thiệu chung (6 dấu mốc có ảnh + nút xem thêm)
  * variant="full":    trang /chang-duong (toàn bộ dấu mốc theo từng năm)
  */
 export default function Journey({ variant = "full" }) {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Reveal from "../common/Reveal";
 import Icon from "../common/Icon";
 
-/** Dải giới thiệu Phòng truyền thống 360° ở cuối trang chủ. */
+/** Dải giới thiệu Phòng truyền thống 360° (trang chủ) ở cuối trang Giới thiệu chung. */
 export default function ShowroomBanner() {
   return (
     <section className="section section--dark showroom-banner" id="phong-truyen-thong">
@@ -18,12 +18,12 @@ export default function ShowroomBanner() {
             Tham quan phối cảnh Phòng truyền thống ngay trên trình duyệt: lịch sử hình thành, các thế hệ Đảng ủy và Ban
             Giám đốc, phần thưởng cao quý, thành tựu và hoạt động tiêu biểu của Bệnh viện.
           </p>
-          <Link href="/phong-truyen-thong" className="btn btn--primary">
+          <Link href="/" className="btn btn--primary">
             Bắt đầu tham quan <Icon name="arrowRight" />
           </Link>
         </Reveal>
         <Reveal className="showroom-banner__media" delay={0.12}>
-          <Link href="/phong-truyen-thong" aria-label="Tham quan Phòng truyền thống 360°">
+          <Link href="/" aria-label="Tham quan Phòng truyền thống 360°">
             <Image
               src="/images/phong-truyen-thong-toan-canh.jpg"
               alt="Phối cảnh toàn cảnh Phòng truyền thống Bệnh viện Da liễu Trung ương"

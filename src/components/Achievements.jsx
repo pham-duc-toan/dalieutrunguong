@@ -91,12 +91,12 @@ export function DarkSection({ id, flush = false, children }) {
 
 /**
  * 02. Thành tựu nổi bật
- * variant="preview": trang chủ (chỉ lưới thành tựu + nút xem thêm)
+ * variant="preview": trang Giới thiệu chung (chỉ lưới thành tựu + nút xem thêm)
  * variant="full":    trang /thanh-tuu (thêm phần thưởng + hành trình phát triển)
  */
 export default function Achievements({ variant = "full" }) {
   const isPreview = variant === "preview";
-  // Thứ bậc heading: trang chủ đã có h2 cho mục → thẻ dùng h3; trang riêng có h1 → thẻ dùng h2
+  // Thứ bậc heading: bản tóm tắt đã có h2 cho mục → thẻ dùng h3; trang riêng có h1 → thẻ dùng h2
   const Heading = isPreview ? "h3" : "h2";
 
   return (

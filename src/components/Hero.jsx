@@ -48,7 +48,7 @@ export default function Hero() {
             nghiên cứu khoa học và chỉ đạo tuyến chuyên ngành Da liễu trên cả nước.
           </p>
           <div className="hero__actions">
-            <Link href="/gioi-thieu" className="btn btn--primary">
+            <Link href="#gioi-thieu" className="btn btn--primary">
               Khám phá bệnh viện <Icon name="arrowRight" />
             </Link>
             <Link href="/media" className="btn btn--ghost">

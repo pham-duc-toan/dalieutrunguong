@@ -8,7 +8,7 @@ const plainName = (name) => name.replace(/^([A-Za-z]{1,4}\.\s*)+/, "");
 
 /**
  * Thanh kế nhiệm: chân dung các đời người đứng đầu nối nhau theo dòng thời gian, bấm để tới tiểu sử.
- * - basePath: trang chứa tiểu sử ("" khi đang ở /lanh-dao, "/lanh-dao" khi đặt ở trang chủ)
+ * - basePath: trang chứa tiểu sử ("" khi đang ở /lanh-dao, "/lanh-dao" khi đặt ở trang Giới thiệu chung)
  * - title: nhãn nhỏ phía trên thanh (dùng ở trang chủ)
  */
 export function SuccessionRail({ basePath = "", title }) {

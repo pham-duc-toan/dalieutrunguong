@@ -7,7 +7,7 @@ import { CurrentLeaders } from "./leadership/LeaderLists";
 
 /**
  * 03. Thế hệ Đảng ủy – Giám đốc
- * variant="preview": trang chủ (thanh các đời Giám đốc + lãnh đạo đương nhiệm + nút xem thêm)
+ * variant="preview": trang Giới thiệu chung (thanh các đời Giám đốc + lãnh đạo đương nhiệm + nút xem thêm)
  * variant="full":    trang /lanh-dao (các đời Giám đốc + 2 tab + trích dẫn)
  */
 export default function Leadership({ variant = "full" }) {
