@@ -12,7 +12,7 @@ export default function ShowroomBanner() {
         <Reveal className="showroom-banner__text">
           <span className="section__kicker">Phòng truyền thống · 360°</span>
           <h2 className="section__title">
-            Đi qua <em>45 năm</em> chỉ trong một lần xoay
+            Hướng tới <em>45 năm</em> chỉ trong một lần xoay
           </h2>
           <p>
             Tham quan phối cảnh Phòng truyền thống ngay trên trình duyệt: lịch sử hình thành, các thế hệ Đảng ủy và Ban

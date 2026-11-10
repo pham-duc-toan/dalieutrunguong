@@ -2,7 +2,7 @@
 export const navItems = [
   { href: "/gioi-thieu", label: "Giới thiệu chung" },
   { href: "/thanh-tuu", label: "Thành tựu nổi bật" },
-  { href: "/chang-duong", label: "Chặng đường 45 năm" },
+  { href: "/chang-duong", label: "Hướng tới 45 năm" },
   { href: "/lanh-dao", label: "Đảng ủy – Giám đốc" },
   { href: "/media", label: "Media" },
   { href: "/", label: "Phòng truyền thống" },

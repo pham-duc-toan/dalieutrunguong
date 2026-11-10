@@ -22,9 +22,9 @@ export default function Hero() {
         <span className="hero__badge">
           <strong>45</strong>
           <span>
-            năm hình thành
+            năm hướng tới
             <br />
-            và phát triển
+            kỷ niệm thành lập
           </span>
         </span>
         <span className="hero__tag">

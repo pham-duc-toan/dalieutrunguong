@@ -12,7 +12,7 @@ export default function EmblemSection() {
           <span className="emblem-section__hint">Kéo để xoay biểu tượng</span>
         </Reveal>
         <Reveal className="emblem-section__text" delay={0.1}>
-          <span className="section__kicker">Biểu tượng kỷ niệm</span>
+          <span className="section__kicker">Hướng tới kỷ niệm 45 năm</span>
           <h2 className="section__title">
             <em>45 năm</em> và cành liễu
           </h2>

@@ -126,8 +126,9 @@ export const journey = [
         tag: "Lãnh đạo",
         title: "Bổ nhiệm lại Phó Giám đốc phụ trách kinh tế",
         text: "ThS. Nguyễn Văn Thành được bổ nhiệm lại giữ chức Phó Giám đốc phụ trách kinh tế theo Quyết định số 3909/QĐ-BYT ngày 22/12/2025 của Bộ trưởng Bộ Y tế.",
-        image: "/images/chang-duong/2026-bo-nhiem-lai-pho-giam-doc.jpg",
-        imageAlt: "Lễ công bố quyết định bổ nhiệm lại Phó Giám đốc phụ trách kinh tế ngày 09/01/2026",
+        image: "/images/lanh-dao/nguyen-van-thanh.jpg",
+        imagePosition: "50% 20%",
+        imageAlt: "ThS. Nguyễn Văn Thành, Phó Giám đốc phụ trách kinh tế",
       },
       {
         date: "23/1/2026",

@@ -27,7 +27,13 @@ function AnniversaryBar() {
 function JourneyPhoto({ item, sizes }) {
   return (
     <div className="jcard__photo">
-      <Image src={item.image} alt={item.imageAlt} fill sizes={sizes} style={{ objectFit: "cover" }} />
+      <Image
+        src={item.image}
+        alt={item.imageAlt}
+        fill
+        sizes={sizes}
+        style={{ objectFit: "cover", objectPosition: item.imagePosition || "50% 50%" }}
+      />
     </div>
   );
 }
@@ -115,7 +121,7 @@ export default function Journey({ variant = "full" }) {
             <div className="jyear__items">
               <Reveal as="article" className="jgoal">
                 <strong>{anniversary.date}</strong>
-                <Heading>Kỷ niệm 45 năm ngày thành lập</Heading>
+                <Heading>Hướng tới kỷ niệm 45 năm ngày thành lập</Heading>
                 <p>
                   Bệnh viện hướng tới kỷ niệm 45 năm ngày thành lập Viện Da liễu Việt Nam ({anniversary.founded}), tiếp
                   tục phát huy nền tảng chuyên môn, đội ngũ và mạng lưới đã xây dựng qua nhiều thế hệ.
